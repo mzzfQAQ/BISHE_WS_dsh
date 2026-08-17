@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  fishbot + 6-DOF 机械臂（MuJoCo 版）
+  对应 ROS 2 URDF：src/fishbot_description/urdf/fishbot/fishbot.urdf.xacro
+  单位：米 / 千克 / 秒 / 弧度
+  结构：差速底盘(2 轮+2 万向轮) + 6R 机械臂（基座旋转/肩/肘/腕滚转/腕俯仰/末端旋转）
+-->
+<mujoco model="fishbot_arm">
+  <compiler angle="radian" autolimits="true" coordinate="local" eulerseq="xyz"/>
+  <option gravity="0 0 -9.81" integrator="Euler" timestep="0.002" iterations="50">
+    <flag contact="enable" frictionloss="enable"/>
+  </option>
+
+  <default>
+    <geom rgba="0.78 0.80 0.86 1" contype="1" conaffinity="1" friction="1.0 0.005 0.0001"/>
+    <joint damping="0.1" armature="0.005" limited="true"/>
+    <motor ctrllimited="true"/>
+    <position kp="40" ctrllimited="true"/>
+  </default>
+
+  <asset>
+    <texture name="ground_tex" type="2d" builtin="checker" width="300" height="300"
+             rgb1="0.45 0.48 0.52" rgb2="0.38 0.41 0.45"/>
+    <material name="ground_mat" texture="ground_tex" texrepeat="8 8" reflectance="0.05"/>
+  </asset>
+
+  <worldbody>
+    <light name="light0" pos="0 0 4" dir="0 0 -1" diffuse="0.8 0.8 0.8" specular="0.3 0.3 0.3"/>
+    <light name="light1" pos="-3 -3 3" dir="1 1 -1" diffuse="0.4 0.4 0.4"/>
+    <geom name="ground" type="plane" size="6 6 0.1" material="ground_mat" friction="1.0 0.1 0.01"/>
+
+    <!-- ================= 底盘 ================= -->
+    <body name="base" pos="0 0 0.111" quat="1 0 0 0">
+      <freejoint/>
+      <!-- base_link：圆柱 r=0.14 h=0.16，质量 2.5kg（密度自动换算） -->
+      <geom name="base_geom" type="cylinder" size="0.14 0.08" pos="0 0 0" rgba="0.92 0.93 0.95 1" friction="1.2 0.01 0.0001"/>
+
+      <!-- 左轮 -->
+      <body name="left_wheel" pos="0 0.14 -0.08">
+        <joint name="left_wheel_joint" type="hinge" axis="0 1 0" limited="false"/>
+        <geom name="left_wheel_geom" type="cylinder" size="0.032 0.02" pos="0 0 0"
+              euler="1.5708 0 0" rgba="0.95 0.80 0.15 1" friction="3.0 0.005 0.0001"/>
+      </body>
+
+      <!-- 右轮 -->
+      <body name="right_wheel" pos="0 -0.14 -0.08">
+        <joint name="right_wheel_joint" type="hinge" axis="0 1 0" limited="false"/>
+        <geom name="right_wheel_geom" type="cylinder" size="0.032 0.02" pos="0 0 0"
+              euler="1.5708 0 0" rgba="0.95 0.80 0.15 1" friction="3.0 0.005 0.0001"/>
+      </body>
+
+      <!-- 前万向轮 -->
+      <body name="front_caster" pos="0.10 0 -0.096">
+        <joint name="front_caster_joint" type="hinge" axis="0 0 1" limited="false"/>
+        <geom name="front_caster_geom" type="sphere" size="0.016" pos="0 0 0" friction="0.1 0.005 0.0001"/>
+      </body>
+
+      <!-- 后万向轮 -->
+      <body name="back_caster" pos="-0.10 0 -0.096">
+        <joint name="back_caster_joint" type="hinge" axis="0 0 1" limited="false"/>
+        <geom name="back_caster_geom" type="sphere" size="0.016" pos="0 0 0" friction="0.1 0.005 0.0001"/>
+      </body>
+
+      <!-- 传感器（激光/IMU/摄像头位置） -->
+      <body name="laser" pos="-0.06 0 0.10">
+        <geom name="laser_geom" type="cylinder" size="0.02 0.01" pos="0 0 0" rgba="0.1 0.1 0.1 1"/>
+        <geom name="laser_support" type="cylinder" size="0.01 0.05" pos="0 0 0.05" rgba="0.1 0.1 0.1 1"/>
+        <site name="laser_site" pos="0 0 0.02" size="0.005"/>
+      </body>
+      <body name="camera_mount" pos="0.12 0 0.075">
+        <geom name="camera_geom" type="box" size="0.01 0.05 0.01" pos="0 0 0" rgba="0.1 0.1 0.1 1"/>
+        <camera name="camera_front" pos="0.03 0 0.01" xyaxes="0 -1 0  0 0 1" fovy="60"/>
+      </body>
+      <camera name="camera_follow" pos="-1.5 1.2 1.0" xyaxes="0.707 -0.707 0  0.35 0.35 0.866" fovy="55"/>
+
+      <!-- ================= 六自由度机械臂 ================= -->
+      <body name="arm_base" pos="0 0 0.08">
+        <!-- 基座：r=0.045 h=0.025 -->
+        <geom name="arm_base_geom" type="cylinder" size="0.045 0.0125" pos="0 0 0.0125" rgba="0.25 0.25 0.30 1"/>
+
+        <!-- 连杆 1：立柱（绕 z） -->
+        <body name="arm_link1" pos="0 0 0.025">
+          <joint name="arm_joint1" type="hinge" damping="1.0" axis="0 0 1" range="-3.1416 3.1416"/>
+          <geom name="arm_link1_geom" type="cylinder" size="0.035 0.06" pos="0 0 0.06"
+                rgba="0.20 0.45 0.80 1" friction="0.8 0.005 0.0001"/>
+
+          <!-- 连杆 2：大臂（绕 y） -->
+          <body name="arm_link2" pos="0 0 0.12">
+            <joint name="arm_joint2" type="hinge" damping="1.0" axis="0 1 0" range="-2.0 2.0"/>
+            <geom name="arm_link2_geom" type="box" size="0.03 0.03 0.10" pos="0.09 0 0"
+                  rgba="0.20 0.45 0.80 1" friction="0.8 0.005 0.0001"/>
+
+            <!-- 连杆 3：小臂（绕 y） -->
+            <body name="arm_link3" pos="0.18 0 0">
+              <joint name="arm_joint3" type="hinge" damping="1.0" axis="0 1 0" range="-2.5 1.5"/>
+              <geom name="arm_link3_geom" type="box" size="0.025 0.025 0.08" pos="0.08 0 0"
+                    rgba="0.80 0.82 0.88 1" friction="0.8 0.005 0.0001"/>
+
+              <!-- 连杆 4：腕部滚转（绕 x） -->
+              <body name="arm_link4" pos="0.15 0 0">
+                <joint name="arm_joint4" type="hinge" damping="1.0" axis="1 0 0" range="-3.1416 3.1416"/>
+                <geom name="arm_link4_geom" type="box" size="0.02 0.02 0.03" pos="0.03 0 0"
+                      rgba="0.25 0.25 0.30 1" friction="0.8 0.005 0.0001"/>
+
+                <!-- 连杆 5：腕部俯仰（绕 y） -->
+                <body name="arm_link5" pos="0.06 0 0">
+                  <joint name="arm_joint5" type="hinge" damping="1.0" axis="0 1 0" range="-2.0 2.0"/>
+                  <geom name="arm_link5_geom" type="box" size="0.02 0.02 0.035" pos="0.035 0 0"
+                        rgba="0.20 0.45 0.80 1" friction="0.8 0.005 0.0001"/>
+
+                  <!-- 连杆 6：末端 + 夹爪（绕 z） -->
+                  <body name="arm_link6" pos="0.07 0 0">
+                    <joint name="arm_joint6" type="hinge" damping="1.0" axis="0 0 1" range="-3.1416 3.1416"/>
+                    <geom name="arm_link6_geom" type="box" size="0.04 0.025 0.04" pos="0.04 0 0"
+                          rgba="0.80 0.82 0.88 1" friction="0.9 0.005 0.0001"/>
+                    <!-- 夹爪左指 -->
+                    <geom name="gripper_left" type="box" size="0.015 0.006 0.0175" pos="0.085 0.014 0"
+                          rgba="0.25 0.25 0.30 1"/>
+                    <!-- 夹爪右指 -->
+                    <geom name="gripper_right" type="box" size="0.015 0.006 0.0175" pos="0.085 -0.014 0"
+                          rgba="0.25 0.25 0.30 1"/>
+                    <!-- 末端执行器参考点 -->
+                    <site name="end_site" pos="0.10 0 0" size="0.01" rgba="0.2 0.9 0.3 1"/>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+
+  <!-- 执行器：轮子速度控制 + 机械臂关节位置控制 -->
+  <actuator>
+    <motor name="left_wheel_motor" joint="left_wheel_joint" ctrlrange="-5 5"/>
+    <motor name="right_wheel_motor" joint="right_wheel_joint" ctrlrange="-5 5"/>
+    <position name="arm_joint1_act" joint="arm_joint1" ctrlrange="-3.1416 3.1416"/>
+    <position name="arm_joint2_act" joint="arm_joint2" ctrlrange="-2.0 2.0"/>
+    <position name="arm_joint3_act" joint="arm_joint3" ctrlrange="-2.5 1.5"/>
+    <position name="arm_joint4_act" joint="arm_joint4" ctrlrange="-3.1416 3.1416"/>
+    <position name="arm_joint5_act" joint="arm_joint5" ctrlrange="-2.0 2.0"/>
+    <position name="arm_joint6_act" joint="arm_joint6" ctrlrange="-3.1416 3.1416"/>
+  </actuator>
+
+  <!-- 传感器 -->
+  <sensor>
+    <framepos name="endeffector_pos" objtype="site" objname="end_site"/>
+    <rangefinder name="laser_front" site="laser_site"/>
+  </sensor>
+</mujoco>
