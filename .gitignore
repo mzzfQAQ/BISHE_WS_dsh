@@ -19,3 +19,6 @@ bags/
 # --- 日志（根目录实验日志如需保留请删除下面两行）---
 backend/
 outofdate/
+
+# MuJoCo 运行日志
+MUJOCO_LOG.TXT
