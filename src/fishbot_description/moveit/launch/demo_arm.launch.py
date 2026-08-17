@@ -38,11 +38,11 @@ def generate_launch_description():
         ],
     )
 
-    # RViz 使用 MoveIt 自带的运动规划面板配置
+    # RViz 使用包内 MoveIt 运动规划面板配置
     rviz_config_file = os.path.join(
-        get_package_share_directory("moveit_ros_visualization"),
+        get_package_share_directory("fishbot_description"),
         "rviz",
-        "moveit.rviz",
+        "moveit_fishbot.rviz",
     )
 
     rviz_node = Node(

@@ -2,17 +2,16 @@
 <robot xmlns:xacro = "http://www.ros.org/wiki/xacro">
     <xacro:include filename="$(find fishbot_description)/urdf/fishbot/common_inertia.xacro"/>
 
-    <xacro:macro name = "base_xacro" params = "length radius mass">
+    <!-- 四轮长方体底盘：length(x) × width(y) × height(z)，质量 mass -->
+    <xacro:macro name = "base_xacro" params = "length width height mass">
         <link name="base_footprint"/>
-            
-        
-        <!-- 机器人身体部分 -->     
+
+        <!-- 机器人身体部分 -->
         <link name="base_link">
-            <!-- 部件的外观 -->
             <visual>
                 <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
                 <geometry>
-                    <cylinder radius="${radius}" length="${length}"/>
+                    <box size="${length} ${width} ${height}"/>
                 </geometry>
                 <material name="white">
                     <color rgba="1.0 1.0 1.0 0.5"/>
@@ -21,24 +20,22 @@
             <collision>
                 <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
                 <geometry>
-                    <cylinder radius="${radius}" length="${length}"/>
+                    <box size="${length} ${width} ${height}"/>
                 </geometry>
                 <material name="white">
                     <color rgba="1.0 1.0 1.0 0.5"/>
                 </material>
             </collision>
-            <xacro:cylinder_inertia m="${mass}" r="${radius}" h="${length}" />
-
+            <!-- 长方体惯量：ixx∝y²+z², iyy∝x²+z², izz∝x²+y² -->
+            <xacro:box_inertia m="${mass}" w="${length}" h="${width}" d="${height}"/>
         </link>
 
+        <!-- base_footprint -> base_link：中心在地面上方 height/2 -->
         <joint name="joint_name" type="fixed">
-            <origin xyz="0.0 0.0 ${length/2.0 + 0.032-0.001}" rpy="0.0 0.0 0.0"/>
+            <origin xyz="0.0 0.0 ${height/2.0}" rpy="0.0 0.0 0.0"/>
             <parent link="base_footprint"/>
             <child link="base_link"/>
         </joint>
     </xacro:macro>
-    
-    
-    
-</robot>    
-<!-- 6.3.1 -->
+
+</robot>

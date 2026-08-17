@@ -1,40 +1,49 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro = "http://www.ros.org/wiki/xacro" name="fishbot">
-<!-- 基础部分 base_link -->
+<!-- 基础部分 base_link（四轮长方体底盘） -->
 <xacro:include filename="$(find fishbot_description)/urdf/fishbot/base.urdf.xacro"/>
 <!-- 传感器部分 -->
 <xacro:include filename="$(find fishbot_description)/urdf/fishbot/sensor/imu.urdf.xacro"/>
 <xacro:include filename="$(find fishbot_description)/urdf/fishbot/sensor/laser.urdf.xacro"/>
 <xacro:include filename="$(find fishbot_description)/urdf/fishbot/sensor/camera.urdf.xacro"/>
-<!-- 执行器部分 -->
+<!-- 执行器部分：四轮 -->
 <xacro:include filename="$(find fishbot_description)/urdf/fishbot/actuator/wheel.urdf.xacro"/>
-<xacro:include filename="$(find fishbot_description)/urdf/fishbot/actuator/caster.urdf.xacro"/>
-<!-- 六自由度机械臂 -->
-<xacro:include filename="$(find fishbot_description)/urdf/fishbot/actuator/arm.urdf.xacro"/>
+<!-- Franka Emika Panda 七自由度机械臂（开源描述，位于 panda_description 包） -->
+<xacro:include filename="$(find panda_description)/urdf/panda.urdf.xacro"/>
 <!-- 插件 -->
-<!-- <xacro:include filename="$(find fishbot_description)/urdf/fishbot/plugins/gazebo_control_plugin.xacro"/> -->
 <xacro:include filename="$(find fishbot_description)/urdf/fishbot/plugins/gazebo_sensor_plugin.xacro"/>
 <xacro:include filename="$(find fishbot_description)/urdf/fishbot/fishbot.ros2_control.xacro"/>
 
+<!-- ================= 底盘：四轮长方体 =================
+     尺寸按 Panda 机械臂（总重约 18kg，臂展 0.855m）设计：
+     长 0.70 × 宽 0.50 × 高 0.22 m，质量 8 kg（保证承载稳定）
+     base_footprint 在地面，base_link 中心在 z=0.11 -->
+<xacro:base_xacro length = "0.70" width = "0.50" height = "0.22" mass = "8.0"/>
 
-<!-- 底盘：为承载机械臂，体积由 r=0.10/h=0.12 增大至 r=0.14/h=0.16，质量 1.0 -> 2.5 kg -->
-<xacro:base_xacro length = "0.16" radius = "0.14" mass = "2.5"/>
-<xacro:imu_xacro xyz="0.0 0.0 0.02"/>
-<!-- 摄像头前移至 x=0.12，给机械臂基座留出顶部空间 -->
-<xacro:camera_xacro xyz="0.12 0.0 0.075"/>
-<!-- 激光雷达后移至 x=-0.06，与顶部中央的机械臂错开 -->
-<xacro:laser_xacro xyz="-0.06 0.0 0.10"/>
-<!-- 轮距随底盘半径增大：y=±0.14（原 ±0.10），z 下移至 -0.08 保持触地 -->
-<xacro:wheel_xacro wheel_name = "left_wheel" xyz="0.0 0.14 -0.08"/>
-<xacro:wheel_xacro wheel_name = "right_wheel" xyz="0.0 -0.14 -0.08"/>
-<!-- 万向轮外移并下移，保持支撑稳定 -->
-<xacro:caster_xacro caster_name = "front_caster" xyz = "0.10 0.0 -0.096"/>
-<xacro:caster_xacro caster_name = "back_caster" xyz = "-0.10 0.0 -0.096"/>
+<!-- 传感器位置（Panda 占据顶部中央，激光后移、相机前移） -->
+<xacro:imu_xacro xyz="0.0 0.0 0.05"/>
+<xacro:camera_xacro xyz="0.28 0.0 0.05"/>
+<xacro:laser_xacro xyz="-0.12 0.0 0.16"/>
 
-<!-- 六自由度机械臂实例化 -->
-<xacro:arm_xacro/>
+<!-- 四轮：前左/前右/后左/后右
+     轮子半径 0.05，中心 y=±0.24（外露于 0.25 半宽），x=±0.20（轴距 0.40），z=-0.06（着地） -->
+<xacro:wheel_xacro wheel_name = "left_front_wheel" xyz="0.20 0.24 -0.06"/>
+<xacro:wheel_xacro wheel_name = "left_back_wheel"  xyz="-0.20 0.24 -0.06"/>
+<xacro:wheel_xacro wheel_name = "right_front_wheel" xyz="0.20 -0.24 -0.06"/>
+<xacro:wheel_xacro wheel_name = "right_back_wheel"  xyz="-0.20 -0.24 -0.06"/>
 
-<!-- <xacro:gazebo_control_plugin /> -->
+<!-- ================= Franka Panda 机械臂 =================
+     安装在底盘顶面中央：base_link 顶面 z=0.11 -->
+<joint name="panda_base_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.11" rpy="0.0 0.0 0.0"/>
+    <parent link="base_link"/>
+    <child link="panda_link0"/>
+</joint>
+
+<gazebo reference="base_link">
+    <selfCollide>false</selfCollide>
+</gazebo>
+
 <xacro:gazebo_sensor_plugin/>
 <xacro:fishbot_ros2_control/>
 

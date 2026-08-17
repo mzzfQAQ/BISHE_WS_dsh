@@ -213,24 +213,26 @@ map_server:
 
 ---
 
-## 6. 六自由度机械臂与 MoveIt 运动规划
+## 6. Franka Panda 七自由度机械臂与 MoveIt 运动规划
 
-为巡检小车新增了一台 **6-DOF 机械臂**（6R 关节臂，UR 风格），支持通过 ros2_control 直接控制，也支持 **MoveIt** 运动规划。
+为巡检小车装配了 **Franka Emika Panda 七自由度机械臂**（开源描述，来自 moveit_resources），支持通过 ros2_control 直接控制，也支持 **MoveIt** 运动规划。
 
 ### 6.1 机械臂结构
 
-机械臂由 7 个连杆 + 6 个旋转关节组成，安装在底盘顶部中央，臂展约 0.46 m，末端带简易夹爪：
+机械臂为 7 自由度（panda_joint1~7）+ 手爪，臂展 0.855 m，安装在底盘顶部中央。关节限位与惯量均取自官方开源描述：
 
-| 关节 | 名称 | 旋转轴 | 限位 | 说明 |
-| --- | --- | --- | --- | --- |
-| 1 | `arm_joint1` | z | ±180° | 基座旋转 |
-| 2 | `arm_joint2` | y | -115° ~ +115° | 肩部俯仰 |
-| 3 | `arm_joint3` | y | -143° ~ +86° | 肘部俯仰 |
-| 4 | `arm_joint4` | x | ±180° | 腕部滚转 |
-| 5 | `arm_joint5` | y | ±115° | 腕部俯仰 |
-| 6 | `arm_joint6` | z | ±180° | 末端旋转（夹爪） |
+| 关节 | 名称 | 限位 | 说明 |
+| --- | --- | --- | --- |
+| 1 | `panda_joint1` | ±170° | 基座旋转 |
+| 2 | `panda_joint2` | ±105° | 肩部 |
+| 3 | `panda_joint3` | ±170° | 上臂 |
+| 4 | `panda_joint4` | -180° ~ +5° | 肘部 |
+| 5 | `panda_joint5` | ±170° | 前臂 |
+| 6 | `panda_joint6` | -5° ~ +219° | 腕部 |
+| 7 | `panda_joint7` | ±170° | 末端旋转 |
 
-各连杆质量 0.25 ~ 0.9 kg（机械臂总重约 3.2 kg），惯量均按几何公式计算。源文件：`src/fishbot_description/urdf/fishbot/actuator/arm.urdf.xacro`。
+Panda 连杆质量 0.63 ~ 4.97 kg（整臂约 18 kg），源文件：`src/panda_description/urdf/panda.urdf.xacro`（含官方完整惯量与动力学参数）。
+
 
 ### 6.2 底盘参数调整
 
@@ -238,22 +240,22 @@ map_server:
 
 | 参数 | 原值 | 新值 |
 | --- | --- | --- |
-| 底盘半径 | 0.10 m | **0.14 m** |
-| 底盘高度 | 0.12 m | **0.16 m** |
-| 底盘质量 | 1.0 kg | **2.5 kg** |
-| 轮距 `wheel_separation` | 0.20 | **0.28** |
-| 激光雷达安装位 | 顶部中央 | 后移 x=-0.06（避开机械臂） |
-| Nav2 `robot_radius` | 0.12 | **0.16** |
+| 底盘形状 | 圆柱 r=0.14 | **长方体 0.70×0.50×0.22 m** |
+| 车轮 | 2 轮 + 2 万向轮 | **四轮驱动（r=0.05）** |
+| 底盘质量 | 1.0 kg | **8 kg**（承载 Panda） |
+| 轮距 / 轴距 | 0.28 / - | **0.48 / 0.40 m** |
+| 激光雷达安装位 | 顶部中央 | 后移 x=-0.12（避开机械臂） |
+| Nav2 `robot_radius` | 0.12 | **0.35**（长方体对角线） |
 
 ### 6.3 直接控制机械臂（ros2_control）
 
-机械臂 6 个关节由 `arm_controller`（`joint_trajectory_controller`）控制，仿真启动时自动加载激活。发送轨迹：
+机械臂 7 个关节由 `arm_controller`（`joint_trajectory_controller`）控制，仿真启动时自动加载激活。发送轨迹：
 
 ```bash
 ros2 action send_goal /arm_controller/follow_joint_trajectory control_msgs/action/FollowJointTrajectory -f "{
   trajectory: {
-    joint_names: [arm_joint1, arm_joint2, arm_joint3, arm_joint4, arm_joint5, arm_joint6],
-    points: [{ positions: [0.5, -1.2, 0.8, 0.3, -0.5, 0.0], time_from_start: {sec: 3} }]
+    joint_names: [panda_joint1, panda_joint2, panda_joint3, panda_joint4, panda_joint5, panda_joint6, panda_joint7],
+    points: [{ positions: [0.0, -0.7854, 0.0, -2.3562, 0.0, 1.5708, 0.7854], time_from_start: {sec: 3} }]
   }
 }"
 ```
@@ -278,10 +280,10 @@ ros2 launch fishbot_description demo_arm.launch.py
 
 **3. 使用方式：**
 
-- 在 RViz 的 MotionPlanning 面板中：设置目标姿态（可拖动末端 / 选择预设姿态 home / up / down）→ **Plan** → **Execute**（通过 `arm_controller` 在 Gazebo 中真实执行）；
+- 在 RViz 的 MotionPlanning 面板中：设置目标姿态（可拖动末端 / 选择预设姿态 ready / up / wave）→ **Plan** → **Execute**（通过 `arm_controller` 在 Gazebo 中真实执行）；
 - 也可用 MoveIt 的 Python 接口（`moveit_commander`）编程控制。
 
-MoveIt 配置文件位于 `src/fishbot_description/moveit/`：`fishbot.srdf`（规划组与预设姿态）、`kinematics.yaml`（KDL 逆解）、`joint_limits.yaml`、`ompl_planning.yaml`（OMPL 规划器）、`moveit_controllers.yaml`（控制器映射到 `arm_controller`）。
+MoveIt 配置文件位于 `src/fishbot_description/moveit/`：`fishbot.srdf`（arm_group 含 7 关节 + 碰撞豁免）、`kinematics.yaml`（KDL 逆解）、`joint_limits.yaml`（Panda 官方限位）、`ompl_planning.yaml`、`moveit_controllers.yaml`（控制器映射到 `arm_controller`）。
 
 ---
 

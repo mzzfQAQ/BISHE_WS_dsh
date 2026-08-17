@@ -19,6 +19,10 @@ def generate_launch_description():
     action_declare_arg_mode_path = launch.actions.DeclareLaunchArgument(
         name='model',default_value=str(default_xacro_path),description='加载的模型文件路径'
     )
+    # world 参数可覆盖（用于测试/切换场景）
+    action_declare_world_arg = launch.actions.DeclareLaunchArgument(
+        name='world',default_value=str(default_gazebo_world_path),description='Gazebo 世界文件路径'
+    )
     # 通过文件路径，获取内容，并转换成参数值对象，以供传入 robot_state_publisher
     substitutions_command_result = launch.substitutions.Command(['xacro ',launch.substitutions.LaunchConfiguration('model')])
     robot_description_value = launch_ros.parameter_descriptions.ParameterValue(substitutions_command_result,value_type=str)
@@ -38,13 +42,19 @@ def generate_launch_description():
         launch.launch_description_sources.PythonLaunchDescriptionSource(
             [get_package_share_directory('gazebo_ros'),'/launch','/gazebo.launch.py']
         ),
-        launch_arguments=[('world',default_gazebo_world_path),('verbose','true')]
+        launch_arguments=[('world',launch.substitutions.LaunchConfiguration('world')),('verbose','true')]
     )
 
     action_spawn_entity = launch_ros.actions.Node(
         package='gazebo_ros',
         executable='spawn_entity.py',
         arguments=['-topic','/robot_description','-entity','fishbot']
+    )
+
+    # 等待 Gazebo 世界加载完成后再 spawn（并发启动时过早 spawn 会导致 gzserver 崩溃）
+    action_delayed_spawn = launch.actions.TimerAction(
+        period=10.0,
+        actions=[action_spawn_entity]
     )
 
     action_load_joint_state_controller = launch.actions.ExecuteProcess(
@@ -75,10 +85,11 @@ def generate_launch_description():
 
     return launch.LaunchDescription([
         action_declare_arg_mode_path,
+        action_declare_world_arg,
         action_robot_state_publisher,
         # action_joint_state_publisher,
         action_launch_gazebo,
-        action_spawn_entity,
+        action_delayed_spawn,
         launch.actions.RegisterEventHandler(
             event_handler=launch.event_handlers.OnProcessExit(
                 target_action=action_spawn_entity,
