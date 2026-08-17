@@ -2,6 +2,7 @@ import launch
 import launch_ros
 from ament_index_python.packages import get_package_share_directory
 import os
+import shlex
 
 def generate_launch_description():
     # 获取功能包的 share 路径
@@ -76,6 +77,14 @@ def generate_launch_description():
         cmd='ros2 control load_controller fishbot_diff_drive_controller --set-state active'.split(' '),
         output='screen'
     )
+
+    # Panda 初始姿态设为 ready（franka 官方初始，避免折叠零位自碰撞影响 MoveIt 规划）
+    action_set_ready_pose = launch.actions.ExecuteProcess(
+        cmd=shlex.split('ros2 action send_goal /arm_controller/follow_joint_trajectory control_msgs/action/FollowJointTrajectory -f '
+             '"{trajectory: {joint_names: [panda_joint1, panda_joint2, panda_joint3, panda_joint4, panda_joint5, panda_joint6, panda_joint7], '
+             'points: [{positions: [0.0, -0.7854, 0.0, -2.3562, 0.0, 1.5708, 0.7854], time_from_start: {sec: 2}}]}}"'),
+        output='screen'
+    )
     
     # action_rviz_node = launch_ros.actions.Node(
     #     package='rviz2',
@@ -106,6 +115,12 @@ def generate_launch_description():
             event_handler=launch.event_handlers.OnProcessExit(
                 target_action=action_load_arm_controller,
                 on_exit=[action_diff_drive_controller],
+            )
+        ),
+        launch.actions.RegisterEventHandler(
+            event_handler=launch.event_handlers.OnProcessExit(
+                target_action=action_diff_drive_controller,
+                on_exit=[action_set_ready_pose],
             )
         ),
 
