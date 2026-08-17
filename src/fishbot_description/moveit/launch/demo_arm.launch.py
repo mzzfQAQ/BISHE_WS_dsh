@@ -22,10 +22,7 @@ def generate_launch_description():
     moveit_config = (
         MoveItConfigsBuilder("fishbot", package_name="fishbot_description")
         .robot_description(file_path="urdf/fishbot/fishbot.urdf.xacro")
-        .robot_description_semantic(file_path="moveit/config/fishbot.srdf")
-        .trajectory_execution(file_path="moveit/config/moveit_controllers.yaml")
         .planning_pipelines(pipelines=["ompl"])
-        .joint_limits(file_path="moveit/config/joint_limits.yaml")
         .to_moveit_configs()
     )
 

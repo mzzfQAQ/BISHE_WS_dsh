@@ -1,14 +1,14 @@
-# OMPL 规划器配置
-planning_plugins:
-  - ompl_interface/OMPLPlanner
-
-request_adapters:
-  - default_planner_request_adapters/AddTimeOptimalParameterization
-  - default_planner_request_adapters/ResolveConstraintFrames
-  - default_planner_request_adapters/FixWorkspaceBounds
-  - default_planner_request_adapters/FixStartStateBounds
-  - default_planner_request_adapters/FixStartStateCollision
-  - default_planner_request_adapters/FixStartStatePathConstraints
+# OMPL 规划器配置（MoveIt 2.5 标准格式）
+planning_plugin: ompl_interface/OMPLPlanner
+start_state_max_bounds_error: 0.1
+jiggle_fraction: 0.05
+request_adapters: >-
+    default_planner_request_adapters/AddTimeOptimalParameterization
+    default_planner_request_adapters/ResolveConstraintFrames
+    default_planner_request_adapters/FixWorkspaceBounds
+    default_planner_request_adapters/FixStartStateBounds
+    default_planner_request_adapters/FixStartStateCollision
+    default_planner_request_adapters/FixStartStatePathConstraints
 
 planner_configs:
   RRTConnectkConfigDefault:
@@ -26,9 +26,6 @@ planner_configs:
   FMTkConfigDefault:
     type: geometric::FMT
     range: 0.01
-  LBKPIECEkConfigDefault:
-    type: geometric::LBKPIECE
-    range: 0.01
 
 arm_group:
   default_planner_config: RRTConnectkConfigDefault
@@ -38,4 +35,3 @@ arm_group:
     - PRMkConfigDefault
     - ESTkConfigDefault
     - FMTkConfigDefault
-    - LBKPIECEkConfigDefault
