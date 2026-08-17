@@ -23,6 +23,7 @@ def generate_launch_description():
         MoveItConfigsBuilder("fishbot", package_name="fishbot_description")
         .robot_description(file_path="urdf/fishbot/fishbot.urdf.xacro")
         .planning_pipelines(pipelines=["ompl"])
+        .trajectory_execution(file_path="config/moveit_controllers.yaml")
         .to_moveit_configs()
     )
 

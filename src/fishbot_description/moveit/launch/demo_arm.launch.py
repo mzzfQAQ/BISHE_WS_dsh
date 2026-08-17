@@ -23,6 +23,7 @@ def generate_launch_description():
         MoveItConfigsBuilder("fishbot", package_name="fishbot_description")
         .robot_description(file_path="urdf/fishbot/fishbot.urdf.xacro")
         .planning_pipelines(pipelines=["ompl"])
+        .trajectory_execution(file_path="config/moveit_controllers.yaml")
         .to_moveit_configs()
     )
 
@@ -60,15 +61,9 @@ def generate_launch_description():
         ],
     )
 
-    # 静态 TF：base_footprint -> base_link（MoveIt 演示时需要，Gazebo 中由 robot_state_publisher 提供）
-    static_tf = Node(
-        package="tf2_ros",
-        executable="static_transform_publisher",
-        name="static_transform_publisher",
-        output="log",
-        arguments=["0.0", "0.0", "0.0", "0.0", "0.0", "0.0", "base_footprint", "base_link"],
-    )
+    # 注：TF 由 Gazebo 侧的 robot_state_publisher 提供（连接仿真时）
+    # 若单独演示（无 Gazebo），可自行添加 base_footprint->base_link 静态 TF
 
     return LaunchDescription(
-        declared_arguments + [move_group_node, rviz_node, static_tf]
+        declared_arguments + [move_group_node, rviz_node]
     )

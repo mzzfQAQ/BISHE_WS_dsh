@@ -1,15 +1,17 @@
 # MoveIt 控制器映射：将规划结果通过 arm_controller 执行（与 ros2_control 的 joint_trajectory_controller 对接）
-controller_names:
-  - arm_controller
+# 参数需位于 moveit_simple_controller_manager 命名空间下（插件要求）
+moveit_simple_controller_manager:
+  controller_names:
+    - arm_controller
 
-arm_controller:
-  action_ns: follow_joint_trajectory
-  type: FollowJointTrajectory
-  default: true
-  joints:
-    - arm_joint1
-    - arm_joint2
-    - arm_joint3
-    - arm_joint4
-    - arm_joint5
-    - arm_joint6
+  arm_controller:
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: true
+    joints:
+      - arm_joint1
+      - arm_joint2
+      - arm_joint3
+      - arm_joint4
+      - arm_joint5
+      - arm_joint6
