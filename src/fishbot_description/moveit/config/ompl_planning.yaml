@@ -1,0 +1,41 @@
+# OMPL 规划器配置
+planning_plugins:
+  - ompl_interface/OMPLPlanner
+
+request_adapters:
+  - default_planner_request_adapters/AddTimeOptimalParameterization
+  - default_planner_request_adapters/ResolveConstraintFrames
+  - default_planner_request_adapters/FixWorkspaceBounds
+  - default_planner_request_adapters/FixStartStateBounds
+  - default_planner_request_adapters/FixStartStateCollision
+  - default_planner_request_adapters/FixStartStatePathConstraints
+
+planner_configs:
+  RRTConnectkConfigDefault:
+    type: geometric::RRTConnect
+    range: 0.01
+  RRTkConfigDefault:
+    type: geometric::RRT
+    range: 0.01
+  PRMkConfigDefault:
+    type: geometric::PRM
+    max_nearest_neighbors: 10
+  ESTkConfigDefault:
+    type: geometric::EST
+    range: 0.01
+  FMTkConfigDefault:
+    type: geometric::FMT
+    range: 0.01
+  LBKPIECEkConfigDefault:
+    type: geometric::LBKPIECE
+    range: 0.01
+
+arm_group:
+  default_planner_config: RRTConnectkConfigDefault
+  planner_configs:
+    - RRTConnectkConfigDefault
+    - RRTkConfigDefault
+    - PRMkConfigDefault
+    - ESTkConfigDefault
+    - FMTkConfigDefault
+    - LBKPIECEkConfigDefault

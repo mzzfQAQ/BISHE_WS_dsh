@@ -9,11 +9,12 @@
 - [3. 环境与依赖安装](#3-环境与依赖安装)
 - [4. 快速开始](#4-快速开始)
 - [5. 地图构建与 SLAM 扫图](#5-地图构建与-slam-扫图)
-- [6. 自定义导航规划器插件](#6-自定义导航规划器插件)
-- [7. 性能对比与测试场景](#7-性能对比与测试场景)
-- [8. 工程实践问题与解决方案](#8-工程实践问题与解决方案)
-- [9. 致谢与作者](#9-致谢与作者)
-- [10. 常见问题](#10-常见问题)
+- [6. 六自由度机械臂与 MoveIt 运动规划](#6-六自由度机械臂与-moveit-运动规划)
+- [7. 自定义导航规划器插件](#7-自定义导航规划器插件)
+- [8. 性能对比与测试场景](#8-性能对比与测试场景)
+- [9. 工程实践问题与解决方案](#9-工程实践问题与解决方案)
+- [10. 致谢与作者](#10-致谢与作者)
+- [11. 常见问题](#11-常见问题)
 
 ---
 
@@ -34,7 +35,7 @@
 
 | 功能包 | 功能说明 |
 | --- | --- |
-| `fishbot_description` | 机器人描述文件与 Gazebo 仿真配置（含 6 个仿真世界） |
+| `fishbot_description` | 机器人描述文件与 Gazebo 仿真配置（含 6 个仿真世界、**6-DOF 机械臂**、MoveIt 配置） |
 | `fishbot_navigation2` | 机器人导航配置（Nav2 参数、地图文件） |
 | `fishbot_application` | 机器人导航应用 Python 代码 |
 | `autopatrol_interfaces` | 自动巡检自定义接口（消息/服务定义） |
@@ -212,9 +213,81 @@ map_server:
 
 ---
 
-## 6. 自定义导航规划器插件
+## 6. 六自由度机械臂与 MoveIt 运动规划
 
-### 6.1 插件总览
+为巡检小车新增了一台 **6-DOF 机械臂**（6R 关节臂，UR 风格），支持通过 ros2_control 直接控制，也支持 **MoveIt** 运动规划。
+
+### 6.1 机械臂结构
+
+机械臂由 7 个连杆 + 6 个旋转关节组成，安装在底盘顶部中央，臂展约 0.46 m，末端带简易夹爪：
+
+| 关节 | 名称 | 旋转轴 | 限位 | 说明 |
+| --- | --- | --- | --- | --- |
+| 1 | `arm_joint1` | z | ±180° | 基座旋转 |
+| 2 | `arm_joint2` | y | -115° ~ +115° | 肩部俯仰 |
+| 3 | `arm_joint3` | y | -143° ~ +86° | 肘部俯仰 |
+| 4 | `arm_joint4` | x | ±180° | 腕部滚转 |
+| 5 | `arm_joint5` | y | ±115° | 腕部俯仰 |
+| 6 | `arm_joint6` | z | ±180° | 末端旋转（夹爪） |
+
+各连杆质量 0.25 ~ 0.9 kg（机械臂总重约 3.2 kg），惯量均按几何公式计算。源文件：`src/fishbot_description/urdf/fishbot/actuator/arm.urdf.xacro`。
+
+### 6.2 底盘参数调整
+
+为承载机械臂，底盘体积与质量相应增大，并联动调整了全部相关参数：
+
+| 参数 | 原值 | 新值 |
+| --- | --- | --- |
+| 底盘半径 | 0.10 m | **0.14 m** |
+| 底盘高度 | 0.12 m | **0.16 m** |
+| 底盘质量 | 1.0 kg | **2.5 kg** |
+| 轮距 `wheel_separation` | 0.20 | **0.28** |
+| 激光雷达安装位 | 顶部中央 | 后移 x=-0.06（避开机械臂） |
+| Nav2 `robot_radius` | 0.12 | **0.16** |
+
+### 6.3 直接控制机械臂（ros2_control）
+
+机械臂 6 个关节由 `arm_controller`（`joint_trajectory_controller`）控制，仿真启动时自动加载激活。发送轨迹：
+
+```bash
+ros2 action send_goal /arm_controller/follow_joint_trajectory control_msgs/action/FollowJointTrajectory -f "{
+  trajectory: {
+    joint_names: [arm_joint1, arm_joint2, arm_joint3, arm_joint4, arm_joint5, arm_joint6],
+    points: [{ positions: [0.5, -1.2, 0.8, 0.3, -0.5, 0.0], time_from_start: {sec: 3} }]
+  }
+}"
+```
+
+### 6.4 MoveIt 运动规划
+
+**1. 安装 MoveIt：**
+
+```bash
+sudo apt install -y ros-humble-moveit
+```
+
+**2. 启动 MoveIt（先启动仿真，再启动 move_group + RViz）：**
+
+```bash
+# 终端 1：启动 Gazebo 仿真（见 4.2）
+ros2 launch fishbot_description gazebo_sim.launch.py
+
+# 终端 2：启动 MoveIt + RViz 运动规划面板
+ros2 launch fishbot_description demo_arm.launch.py
+```
+
+**3. 使用方式：**
+
+- 在 RViz 的 MotionPlanning 面板中：设置目标姿态（可拖动末端 / 选择预设姿态 home / up / down）→ **Plan** → **Execute**（通过 `arm_controller` 在 Gazebo 中真实执行）；
+- 也可用 MoveIt 的 Python 接口（`moveit_commander`）编程控制。
+
+MoveIt 配置文件位于 `src/fishbot_description/moveit/`：`fishbot.srdf`（规划组与预设姿态）、`kinematics.yaml`（KDL 逆解）、`joint_limits.yaml`、`ompl_planning.yaml`（OMPL 规划器）、`moveit_controllers.yaml`（控制器映射到 `arm_controller`）。
+
+---
+
+## 7. 自定义导航规划器插件
+
+### 7.1 插件总览
 
 本项目在 Navigation 2 的基础上实现了 10 个基于 RRT 算法的自定义导航规划器插件（C++，pluginlib 注册），形成一个递进演化的算法家族：
 
@@ -231,7 +304,7 @@ map_server:
 | `RRTConnectSmoothPlanner` | RRT Connect + 路径平滑 | `nav2_rrt_connect_smooth_planner.cpp` |
 | `RRTConnectAutoPruningPlanner` | RRT Connect + FSM 自适应剪枝（当前默认启用） | `nav2_rrt_connect_auto_pruning_planner.cpp` |
 
-### 6.2 开发一个新插件
+### 7.2 开发一个新插件
 
 1. **创建插件类**：继承 `nav2_core::GlobalPlanner`，实现其中的纯虚函数：
 
@@ -259,7 +332,7 @@ PLUGINLIB_EXPORT_CLASS(nav2_custom_planners::RRTOriginPlanner, nav2_core::Global
 
 4. **启用插件**：在导航参数配置文件 `nav2_params.yaml` 中指定使用的插件（见 6.3）。
 
-### 6.3 切换启用插件
+### 7.3 切换启用插件
 
 在 `fishbot_navigation2/config/nav2_params.yaml` 中，通过 `planner_plugins` 与 `plugin` 字段切换规划器：
 
@@ -291,9 +364,9 @@ planner_server:
 
 ---
 
-## 7. 性能对比与测试场景
+## 8. 性能对比与测试场景
 
-### 7.1 房间场景：各插件性能对比
+### 8.1 房间场景：各插件性能对比
 
 房间的建模：
 
@@ -361,7 +434,7 @@ planner_server:
 
 > 相比于上一版仅能生成锐利折线的剪枝策略，新算法在保留贪婪剪枝骨干的基础上，引入了三次 B 样条（B-Spline）拟合技术，通过二阶连续的基函数将离散控制点转化为圆润、丝滑的 C² 路径，彻底消除了机器人转弯时的角速度突变。在搜索策略上，它将偏置逻辑从空间敏感转为时间（迭代次数）敏感，使算法在遭遇复杂地形时能随时间推移自动增强探索驱动力；配合首尾重复点的边界约束处理，该规划器在确保路径严格闭合的同时，为底层控制器提供了符合物理惯性且极具动态美感的导航轨迹。
 
-### 7.2 性能数据量化对比
+### 8.2 性能数据量化对比
 
 运行性能分析脚本 `log_analyzer.py`（解析日志中的采样节点数与耗时，生成性能对比图）：
 
@@ -381,7 +454,7 @@ python3 log_analyzer.py
 
 > 这种阶梯式的进化逻辑表明，现代路径规划的优化重心已从单纯的搜索加速，转向了在极小数据规模下构建高质量、符合动力学约束的最优路径。
 
-### 7.3 窄通道场景：与 nav2_navfn_planner 的性能比较
+### 8.3 窄通道场景：与 nav2_navfn_planner 的性能比较
 
 窄通道的建模：
 
@@ -413,7 +486,7 @@ python3 log_analyzer.py
 
 普通 RRT 就像在迷宫中从起点单向漫游，由于随机采样很难精准落在狭窄入口，导致其极易在开阔区徘徊而无法穿透通道；而 RRT-Connect 采用了"双向奔赴"的策略，从起点和终点同时生长两棵树，并引入了贪婪扩展机制（即发现前方无障碍就连续延伸），这使得两棵树能像拉链一样迅速在狭窄空间内完成对接，极大地提高了穿越窄通道的效率和成功率。
 
-### 7.4 U 型陷阱场景
+### 8.4 U 型陷阱场景
 
 U 型陷阱的建模：
 
@@ -421,7 +494,7 @@ U 型陷阱的建模：
 
 **选择 U 型陷阱的理由**：选择 U 型陷阱是为了测试算法在**局部最优陷阱**中的"脱困"能力：它利用目标点与陷阱底部的直线距离诱导，检验算法能否识破这种"近在咫尺却不可达"的假象，从而主动向远离目标的区域进行全局搜索；对于轮式小车而言，这更是评估其**非完整性约束处理能力**的关键，考察算法能否在狭窄死胡同内规划出符合转弯半径的调头或倒车路径，从而验证算法在复杂空间布局下的探索完备性与路径逻辑性。
 
-### 7.5 大房间复杂场景
+### 8.5 大房间复杂场景
 
 使用 `bigger_room_complex.world`（大房间复杂布局，含多个房间与门道）验证算法在大尺度空间下的规划能力：
 
@@ -443,9 +516,9 @@ RVIZ 路径显示：
 
 ---
 
-## 8. 工程实践问题与解决方案
+## 9. 工程实践问题与解决方案
 
-### 8.1 解法一：工程调度干预
+### 9.1 解法一：工程调度干预
 
 在基于 ROS 2 Nav2 框架开发 RRT-Connect 全局规划器时，我们遇到小车在跨越宽阔门道时极限贴边切角，以及在大尺度房间内由于"窄门效应"导致偶发性规划超时的问题。深入排查发现，这源于算法底层的三个核心矛盾：
 
@@ -455,7 +528,7 @@ RVIZ 路径显示：
 
 鉴于商用移动机器人对路径确定性与安全性的绝对要求，单纯依靠底层算法调参无法完美兼顾平滑直行与居中安全，因此我们最终决定引入业务层的**工程调度干预**。具体方案是在跨越门道等关键拓扑节点处，利用多点导航功能下发途径点（Waypoints）切分规划任务，强制剪枝算法在节点间受限连线。这一方案既彻底根除了越界切角的隐患，又解耦了算法与复杂场景：让全局规划器专注开阔地带的宏观避障，而微观的高精度过门交由确定的空间坐标来保障，实现了运行效率与系统稳定性的最优平衡。
 
-### 8.2 解法二：有限状态机调节
+### 9.2 解法二：有限状态机调节
 
 在基于 ROS 2 Nav2 框架开发 `RRTConnectAutoPruningPlanner` 时，我们针对机器人过门贴边切角与开阔地带行进效率的矛盾，设计并实现了一种基于**有限状态机（FSM）的自适应剪枝**方案。
 
@@ -469,14 +542,14 @@ RVIZ 路径显示：
 
 ---
 
-## 9. 致谢与作者
+## 10. 致谢与作者
 
 - **原作者**（感谢鱼香 ROS 提供的基础框架）：[fishros](https://github.com/fishros)
 - **编者**（负责自定义导航规划器插件的实现、插件测试与性能比较、特殊场景测试）：[mzzfQAQ](https://github.com/mzzfQAQ)
 
 ---
 
-## 10. 常见问题
+## 11. 常见问题
 
 **Q1：YOLOv8 运行报 `_ARRAY_API not found` 崩溃？**
 
