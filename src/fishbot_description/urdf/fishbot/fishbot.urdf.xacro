@@ -9,20 +9,30 @@
 <!-- 执行器部分 -->
 <xacro:include filename="$(find fishbot_description)/urdf/fishbot/actuator/wheel.urdf.xacro"/>
 <xacro:include filename="$(find fishbot_description)/urdf/fishbot/actuator/caster.urdf.xacro"/>
+<!-- 六自由度机械臂 -->
+<xacro:include filename="$(find fishbot_description)/urdf/fishbot/actuator/arm.urdf.xacro"/>
 <!-- 插件 -->
 <!-- <xacro:include filename="$(find fishbot_description)/urdf/fishbot/plugins/gazebo_control_plugin.xacro"/> -->
 <xacro:include filename="$(find fishbot_description)/urdf/fishbot/plugins/gazebo_sensor_plugin.xacro"/>
 <xacro:include filename="$(find fishbot_description)/urdf/fishbot/fishbot.ros2_control.xacro"/>
 
 
-<xacro:base_xacro length = "0.12" radius = "0.10"/>
+<!-- 底盘：为承载机械臂，体积由 r=0.10/h=0.12 增大至 r=0.14/h=0.16，质量 1.0 -> 2.5 kg -->
+<xacro:base_xacro length = "0.16" radius = "0.14" mass = "2.5"/>
 <xacro:imu_xacro xyz="0.0 0.0 0.02"/>
-<xacro:camera_xacro xyz="0.10 0.0 0.075"/>
-<xacro:laser_xacro xyz="0.0 0.0 0.10"/>
-<xacro:wheel_xacro wheel_name = "left_wheel" xyz="0.0 0.10 -0.06"/>
-<xacro:wheel_xacro wheel_name = "right_wheel" xyz="0.0 -0.10 -0.06"/>
-<xacro:caster_xacro caster_name = "front_caster" xyz = "0.08 0.0 -0.076"/>
-<xacro:caster_xacro caster_name = "back_caster" xyz = "-0.08 0.0 -0.076"/>
+<!-- 摄像头前移至 x=0.12，给机械臂基座留出顶部空间 -->
+<xacro:camera_xacro xyz="0.12 0.0 0.075"/>
+<!-- 激光雷达后移至 x=-0.06，与顶部中央的机械臂错开 -->
+<xacro:laser_xacro xyz="-0.06 0.0 0.10"/>
+<!-- 轮距随底盘半径增大：y=±0.14（原 ±0.10），z 下移至 -0.08 保持触地 -->
+<xacro:wheel_xacro wheel_name = "left_wheel" xyz="0.0 0.14 -0.08"/>
+<xacro:wheel_xacro wheel_name = "right_wheel" xyz="0.0 -0.14 -0.08"/>
+<!-- 万向轮外移并下移，保持支撑稳定 -->
+<xacro:caster_xacro caster_name = "front_caster" xyz = "0.10 0.0 -0.096"/>
+<xacro:caster_xacro caster_name = "back_caster" xyz = "-0.10 0.0 -0.096"/>
+
+<!-- 六自由度机械臂实例化 -->
+<xacro:arm_xacro/>
 
 <!-- <xacro:gazebo_control_plugin /> -->
 <xacro:gazebo_sensor_plugin/>

@@ -10,6 +10,8 @@ controller_manager:
       type: effort_controllers/JointGroupEffortController
     fishbot_diff_drive_controller:
       type: diff_drive_controller/DiffDriveController
+    arm_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
     
 
 
@@ -30,7 +32,7 @@ fishbot_diff_drive_controller:
     left_wheel_names: ["left_wheel_joint"]
     right_wheel_names: ["right_wheel_joint"]
 
-    wheel_separation: 0.20
+    wheel_separation: 0.28
     #wheels_per_side: 1  # actually 2, but both are controlled by 1 signal
     wheel_radius: 0.032
 
@@ -51,3 +53,25 @@ fishbot_diff_drive_controller:
     #publish_limited_velocity: true
     use_stamped_vel: false
     #velocity_rolling_window_size: 10
+
+# 六自由度机械臂轨迹控制器
+arm_controller:
+  ros__parameters:
+    joints:
+      - arm_joint1
+      - arm_joint2
+      - arm_joint3
+      - arm_joint4
+      - arm_joint5
+      - arm_joint6
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+    state_publish_rate: 50.0
+    action_monitor_rate: 20.0
+    allow_partial_joints_goal: false
+    constraints:
+      stopped_velocity_tolerance: 0.01
+      goal_time: 0.0

@@ -52,6 +52,11 @@ def generate_launch_description():
         output='screen'
     )
 
+    action_load_arm_controller = launch.actions.ExecuteProcess(
+        cmd='ros2 control load_controller arm_controller --set-state active'.split(' '),
+        output='screen'
+    )
+
     action_load_effort_controller = launch.actions.ExecuteProcess(
         cmd='ros2 control load_controller fishbot_effort_controller --set-state active'.split(' '),
         output='screen'
@@ -83,6 +88,12 @@ def generate_launch_description():
         launch.actions.RegisterEventHandler(
             event_handler=launch.event_handlers.OnProcessExit(
                 target_action=action_load_joint_state_controller,
+                on_exit=[action_load_arm_controller],
+            )
+        ),
+        launch.actions.RegisterEventHandler(
+            event_handler=launch.event_handlers.OnProcessExit(
+                target_action=action_load_arm_controller,
                 on_exit=[action_diff_drive_controller],
             )
         ),
