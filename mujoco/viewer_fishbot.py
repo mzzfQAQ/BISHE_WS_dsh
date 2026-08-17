@@ -31,6 +31,10 @@ def main():
     m = mujoco.MjModel.from_xml_path(XML)
     d = mujoco.MjData(m)
 
+    # Panda 初始 ready 姿态（franka 官方初始，避免折叠零位自碰撞）
+    d.qpos[11:18] = np.array([0.0, -0.7854, 0.0, -2.3562, 0.0, 1.5708, 0.7854])
+    mujoco.mj_forward(m, d)
+
     v = viewer.launch_passive(m, d, show_left_ui=True, show_right_ui=False)
 
     print("=" * 50)

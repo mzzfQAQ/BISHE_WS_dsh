@@ -73,7 +73,7 @@
       </body>
 
       <!-- 传感器支架 -->
-      <body name="laser" pos="-0.20 0 0.16">
+      <body name="laser" pos="-0.30 0 0.20">
         <geom name="laser_geom" type="cylinder" size="0.02 0.01" rgba="0.1 0.1 0.1 1"/>
       </body>
       <body name="camera_mount" pos="0.28 0 0.05">
