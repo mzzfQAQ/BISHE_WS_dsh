@@ -1,0 +1,1122 @@
+[INFO] [launch]: All log files can be found below /home/lrm/.ros/log/2026-03-12-13-29-20-943345-lrm-Lenovo-Legion-R9000X2021R-62869
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [component_container_isolated-1]: process started with pid [62885]
+[INFO] [rviz2-2]: process started with pid [62887]
+[rviz2-2] Warning: Ignoring XDG_SESSION_TYPE=wayland on Gnome. Use QT_QPA_PLATFORM=wayland to run on Wayland anyway.
+[component_container_isolated-1] [INFO] [1773293361.809141067] [nav2_container]: Load Library: /opt/ros/humble/lib/libcontroller_server_core.so
+[component_container_isolated-1] [INFO] [1773293361.814027452] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_controller::ControllerServer>
+[component_container_isolated-1] [INFO] [1773293361.814060915] [nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_controller::ControllerServer>
+[component_container_isolated-1] [INFO] [1773293361.823347459] [controller_server]: 
+[component_container_isolated-1] 	controller_server lifecycle node launched. 
+[component_container_isolated-1] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-1] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[component_container_isolated-1] [INFO] [1773293361.828117302] [controller_server]: Creating controller server
+[component_container_isolated-1] [INFO] [1773293361.834202006] [local_costmap.local_costmap]: 
+[component_container_isolated-1] 	local_costmap lifecycle node launched. 
+[component_container_isolated-1] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-1] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[component_container_isolated-1] [INFO] [1773293361.835008691] [local_costmap.local_costmap]: Creating Costmap
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/controller_server' in container '/nav2_container'
+[component_container_isolated-1] [INFO] [1773293361.836010867] [nav2_container]: Load Library: /opt/ros/humble/lib/libmap_server_core.so
+[component_container_isolated-1] [INFO] [1773293361.845997042] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_map_server::CostmapFilterInfoServer>
+[component_container_isolated-1] [INFO] [1773293361.846038862] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_map_server::MapSaver>
+[component_container_isolated-1] [INFO] [1773293361.846044853] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_map_server::MapServer>
+[component_container_isolated-1] [INFO] [1773293361.846055894] [nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_map_server::MapServer>
+[component_container_isolated-1] [INFO] [1773293361.853088611] [map_server]: 
+[component_container_isolated-1] 	map_server lifecycle node launched. 
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/map_server' in container '/nav2_container'
+[component_container_isolated-1] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-1] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[component_container_isolated-1] [INFO] [1773293361.853175747] [map_server]: Creating
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/smoother_server' in container '/nav2_container'
+[component_container_isolated-1] [INFO] [1773293361.853628157] [nav2_container]: Load Library: /opt/ros/humble/lib/libsmoother_server_core.so
+[component_container_isolated-1] [INFO] [1773293361.855153559] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_smoother::SmootherServer>
+[component_container_isolated-1] [INFO] [1773293361.855174198] [nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_smoother::SmootherServer>
+[component_container_isolated-1] [INFO] [1773293361.860824496] [smoother_server]: 
+[component_container_isolated-1] 	smoother_server lifecycle node launched. 
+[component_container_isolated-1] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-1] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[component_container_isolated-1] [INFO] [1773293361.862908901] [smoother_server]: Creating smoother server
+[component_container_isolated-1] [INFO] [1773293361.863659448] [nav2_container]: Load Library: /opt/ros/humble/lib/libamcl_core.so
+[component_container_isolated-1] [INFO] [1773293361.865693107] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_amcl::AmclNode>
+[component_container_isolated-1] [INFO] [1773293361.865729927] [nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_amcl::AmclNode>
+[component_container_isolated-1] [INFO] [1773293361.874108313] [amcl]: 
+[component_container_isolated-1] 	amcl lifecycle node launched. 
+[component_container_isolated-1] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-1] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[component_container_isolated-1] [INFO] [1773293361.874525457] [amcl]: Creating
+[component_container_isolated-1] [INFO] [1773293361.876186787] [nav2_container]: Load Library: /opt/ros/humble/lib/libplanner_server_core.so
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/amcl' in container '/nav2_container'
+[component_container_isolated-1] [INFO] [1773293361.876886127] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_planner::PlannerServer>
+[component_container_isolated-1] [INFO] [1773293361.876904903] [nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_planner::PlannerServer>
+[component_container_isolated-1] [INFO] [1773293361.886414842] [planner_server]: 
+[component_container_isolated-1] 	planner_server lifecycle node launched. 
+[component_container_isolated-1] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-1] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[component_container_isolated-1] [INFO] [1773293361.889339886] [planner_server]: Creating
+[component_container_isolated-1] [INFO] [1773293361.900669907] [global_costmap.global_costmap]: 
+[component_container_isolated-1] 	global_costmap lifecycle node launched. 
+[component_container_isolated-1] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-1] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[component_container_isolated-1] [INFO] [1773293361.901395307] [global_costmap.global_costmap]: Creating Costmap
+[component_container_isolated-1] [INFO] [1773293361.903018675] [nav2_container]: Load Library: /opt/ros/humble/lib/libnav2_lifecycle_manager_core.so
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/planner_server' in container '/nav2_container'
+[component_container_isolated-1] [INFO] [1773293361.904174203] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_lifecycle_manager::LifecycleManager>
+[component_container_isolated-1] [INFO] [1773293361.904202637] [nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_lifecycle_manager::LifecycleManager>
+[rviz2-2] [INFO] [1773293361.906129832] [rviz2]: Stereo is NOT SUPPORTED
+[rviz2-2] [INFO] [1773293361.906312851] [rviz2]: OpenGl version: 4.6 (GLSL 4.6)
+[component_container_isolated-1] [INFO] [1773293361.911251044] [lifecycle_manager_localization]: Creating
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/lifecycle_manager_localization' in container '/nav2_container'
+[component_container_isolated-1] [INFO] [1773293361.913978832] [lifecycle_manager_localization]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[component_container_isolated-1] [INFO] [1773293361.914141812] [nav2_container]: Load Library: /opt/ros/humble/lib/libbehavior_server_core.so
+[component_container_isolated-1] [INFO] [1773293361.918123606] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<behavior_server::BehaviorServer>
+[component_container_isolated-1] [INFO] [1773293361.918197928] [nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<behavior_server::BehaviorServer>
+[component_container_isolated-1] [INFO] [1773293361.921572717] [lifecycle_manager_localization]: [34m[1mStarting managed nodes bringup...[0m[0m
+[component_container_isolated-1] [INFO] [1773293361.921622472] [lifecycle_manager_localization]: [34m[1mConfiguring map_server[0m[0m
+[component_container_isolated-1] [INFO] [1773293361.921829115] [map_server]: Configuring
+[component_container_isolated-1] [INFO] [1773293361.921900210] [map_io]: Loading yaml file: /home/lrm/BISHE_WS/install/fishbot_navigation2/share/fishbot_navigation2/maps/room.yaml
+[component_container_isolated-1] [INFO] [1773293361.922165164] [map_io]: resolution: 0.05
+[component_container_isolated-1] [INFO] [1773293361.922175844] [map_io]: origin[0]: -10.4
+[component_container_isolated-1] [INFO] [1773293361.922182467] [map_io]: origin[1]: -6.53
+[component_container_isolated-1] [INFO] [1773293361.922188939] [map_io]: origin[2]: 0
+[component_container_isolated-1] [INFO] [1773293361.922195281] [map_io]: free_thresh: 0.25
+[component_container_isolated-1] [INFO] [1773293361.922201834] [map_io]: occupied_thresh: 0.65
+[component_container_isolated-1] [INFO] [1773293361.922209959] [map_io]: mode: trinary
+[component_container_isolated-1] [INFO] [1773293361.922216582] [map_io]: negate: 0
+[component_container_isolated-1] [INFO] [1773293361.922411933] [map_io]: Loading image_file: /home/lrm/BISHE_WS/install/fishbot_navigation2/share/fishbot_navigation2/maps/room.pgm
+[rviz2-2] [INFO] [1773293361.924215504] [rviz2]: Stereo is NOT SUPPORTED
+[component_container_isolated-1] [INFO] [1773293361.930352557] [behavior_server]: 
+[component_container_isolated-1] 	behavior_server lifecycle node launched. 
+[component_container_isolated-1] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-1] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[component_container_isolated-1] [INFO] [1773293361.931070633] [map_io]: Read map /home/lrm/BISHE_WS/install/fishbot_navigation2/share/fishbot_navigation2/maps/room.pgm: 376 X 222 map @ 0.05 m/cell
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/behavior_server' in container '/nav2_container'
+[component_container_isolated-1] [INFO] [1773293361.935489509] [lifecycle_manager_localization]: [34m[1mConfiguring amcl[0m[0m
+[component_container_isolated-1] [INFO] [1773293361.935676675] [amcl]: Configuring
+[component_container_isolated-1] [INFO] [1773293361.935793086] [amcl]: initTransforms
+[component_container_isolated-1] [INFO] [1773293361.936279992] [nav2_container]: Load Library: /opt/ros/humble/lib/libbt_navigator_core.so
+[component_container_isolated-1] [INFO] [1773293361.938638188] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_bt_navigator::BtNavigator>
+[component_container_isolated-1] [INFO] [1773293361.938664207] [nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_bt_navigator::BtNavigator>
+[component_container_isolated-1] [INFO] [1773293361.943727098] [amcl]: initPubSub
+[component_container_isolated-1] [INFO] [1773293361.947869016] [amcl]: Subscribed to map topic.
+[component_container_isolated-1] [INFO] [1773293361.951837525] [lifecycle_manager_localization]: [34m[1mActivating map_server[0m[0m
+[component_container_isolated-1] [INFO] [1773293361.951949488] [map_server]: Activating
+[component_container_isolated-1] [INFO] [1773293361.952090676] [map_server]: Creating bond (map_server) to lifecycle manager.
+[component_container_isolated-1] [INFO] [1773293361.952177431] [amcl]: Received a 376 X 222 map @ 0.050 m/pix
+[component_container_isolated-1] [INFO] [1773293361.955077848] [bt_navigator]: 
+[component_container_isolated-1] 	bt_navigator lifecycle node launched. 
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/bt_navigator' in container '/nav2_container'
+[component_container_isolated-1] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-1] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[component_container_isolated-1] [INFO] [1773293361.955138984] [bt_navigator]: Creating
+[component_container_isolated-1] [INFO] [1773293361.957471742] [nav2_container]: Load Library: /opt/ros/humble/lib/libwaypoint_follower_core.so
+[component_container_isolated-1] [INFO] [1773293361.958475100] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_waypoint_follower::WaypointFollower>
+[component_container_isolated-1] [INFO] [1773293361.958516299] [nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_waypoint_follower::WaypointFollower>
+[component_container_isolated-1] [INFO] [1773293361.971275458] [waypoint_follower]: 
+[component_container_isolated-1] 	waypoint_follower lifecycle node launched. 
+[component_container_isolated-1] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-1] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[component_container_isolated-1] [INFO] [1773293361.971671141] [waypoint_follower]: Creating
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/waypoint_follower' in container '/nav2_container'
+[component_container_isolated-1] [INFO] [1773293361.973469381] [nav2_container]: Load Library: /opt/ros/humble/lib/libvelocity_smoother_core.so
+[component_container_isolated-1] [INFO] [1773293361.974196855] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_velocity_smoother::VelocitySmoother>
+[component_container_isolated-1] [INFO] [1773293361.974218005] [nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_velocity_smoother::VelocitySmoother>
+[component_container_isolated-1] [INFO] [1773293361.987581695] [velocity_smoother]: 
+[component_container_isolated-1] 	velocity_smoother lifecycle node launched. 
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/velocity_smoother' in container '/nav2_container'
+[component_container_isolated-1] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-1] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[component_container_isolated-1] [INFO] [1773293361.990435884] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_lifecycle_manager::LifecycleManager>
+[component_container_isolated-1] [INFO] [1773293361.990478214] [nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_lifecycle_manager::LifecycleManager>
+[component_container_isolated-1] [INFO] [1773293362.005384468] [lifecycle_manager_navigation]: Creating
+[component_container_isolated-1] [INFO] [1773293362.007485785] [lifecycle_manager_navigation]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/lifecycle_manager_navigation' in container '/nav2_container'
+[component_container_isolated-1] [INFO] [1773293362.019558338] [lifecycle_manager_navigation]: [34m[1mStarting managed nodes bringup...[0m[0m
+[component_container_isolated-1] [INFO] [1773293362.019593605] [lifecycle_manager_navigation]: [34m[1mConfiguring controller_server[0m[0m
+[component_container_isolated-1] [INFO] [1773293362.019716759] [controller_server]: Configuring controller interface
+[component_container_isolated-1] [INFO] [1773293362.019939383] [controller_server]: getting goal checker plugins..
+[component_container_isolated-1] [INFO] [1773293362.020082926] [controller_server]: Controller frequency set to 20.0000Hz
+[component_container_isolated-1] [INFO] [1773293362.020126288] [local_costmap.local_costmap]: Configuring
+[component_container_isolated-1] [INFO] [1773293362.024016758] [local_costmap.local_costmap]: Using plugin "voxel_layer"
+[component_container_isolated-1] [INFO] [1773293362.028720826] [local_costmap.local_costmap]: Subscribed to Topics: scan
+[component_container_isolated-1] [INFO] [1773293362.034734705] [local_costmap.local_costmap]: Initialized plugin "voxel_layer"
+[component_container_isolated-1] [INFO] [1773293362.034764051] [local_costmap.local_costmap]: Using plugin "inflation_layer"
+[component_container_isolated-1] [INFO] [1773293362.035527342] [local_costmap.local_costmap]: Initialized plugin "inflation_layer"
+[component_container_isolated-1] [INFO] [1773293362.042816337] [controller_server]: Created progress_checker : progress_checker of type nav2_controller::SimpleProgressChecker
+[component_container_isolated-1] [INFO] [1773293362.043870752] [controller_server]: Created goal checker : general_goal_checker of type nav2_controller::SimpleGoalChecker
+[component_container_isolated-1] [INFO] [1773293362.044276785] [controller_server]: Controller Server has general_goal_checker  goal checkers available.
+[component_container_isolated-1] [INFO] [1773293362.046269064] [controller_server]: Created controller : FollowPath of type dwb_core::DWBLocalPlanner
+[component_container_isolated-1] [INFO] [1773293362.047283674] [controller_server]: Setting transform_tolerance to 0.500000
+[component_container_isolated-1] [INFO] [1773293362.055429188] [lifecycle_manager_localization]: Server map_server connected with bond.
+[component_container_isolated-1] [INFO] [1773293362.055482760] [lifecycle_manager_localization]: [34m[1mActivating amcl[0m[0m
+[component_container_isolated-1] [INFO] [1773293362.055842814] [amcl]: Activating
+[component_container_isolated-1] [INFO] [1773293362.055880777] [amcl]: Creating bond (amcl) to lifecycle manager.
+[component_container_isolated-1] [INFO] [1773293362.058041096] [controller_server]: Using critic "RotateToGoal" (dwb_critics::RotateToGoalCritic)
+[component_container_isolated-1] [INFO] [1773293362.058763279] [controller_server]: Critic plugin initialized
+[component_container_isolated-1] [INFO] [1773293362.059125889] [controller_server]: Using critic "Oscillation" (dwb_critics::OscillationCritic)
+[component_container_isolated-1] [INFO] [1773293362.059828055] [controller_server]: Critic plugin initialized
+[component_container_isolated-1] [INFO] [1773293362.060008949] [controller_server]: Using critic "BaseObstacle" (dwb_critics::BaseObstacleCritic)
+[component_container_isolated-1] [INFO] [1773293362.060225581] [controller_server]: Critic plugin initialized
+[component_container_isolated-1] [INFO] [1773293362.060364285] [controller_server]: Using critic "GoalAlign" (dwb_critics::GoalAlignCritic)
+[component_container_isolated-1] [INFO] [1773293362.060799242] [controller_server]: Critic plugin initialized
+[component_container_isolated-1] [INFO] [1773293362.060932275] [controller_server]: Using critic "PathAlign" (dwb_critics::PathAlignCritic)
+[component_container_isolated-1] [INFO] [1773293362.061317778] [controller_server]: Critic plugin initialized
+[component_container_isolated-1] [INFO] [1773293362.061488343] [controller_server]: Using critic "PathDist" (dwb_critics::PathDistCritic)
+[component_container_isolated-1] [INFO] [1773293362.061756693] [controller_server]: Critic plugin initialized
+[component_container_isolated-1] [INFO] [1773293362.061883053] [controller_server]: Using critic "GoalDist" (dwb_critics::GoalDistCritic)
+[component_container_isolated-1] [INFO] [1773293362.062112179] [controller_server]: Critic plugin initialized
+[component_container_isolated-1] [INFO] [1773293362.062142006] [controller_server]: Controller Server has FollowPath  controllers available.
+[component_container_isolated-1] [WARN] [1773293362.065272140] [amcl]: New subscription discovered on topic '/particle_cloud', requesting incompatible QoS. No messages will be sent to it. Last incompatible policy: RELIABILITY_QOS_POLICY
+[component_container_isolated-1] [INFO] [1773293362.074625110] [lifecycle_manager_navigation]: [34m[1mConfiguring smoother_server[0m[0m
+[component_container_isolated-1] [INFO] [1773293362.074796266] [smoother_server]: Configuring smoother server
+[component_container_isolated-1] [INFO] [1773293362.075876350] [amcl]: createLaserObject
+[component_container_isolated-1] [INFO] [1773293362.083652281] [smoother_server]: Created smoother : simple_smoother of type nav2_smoother::SimpleSmoother
+[component_container_isolated-1] [INFO] [1773293362.084850710] [smoother_server]: Smoother Server has simple_smoother  smoothers available.
+[component_container_isolated-1] [INFO] [1773293362.091487775] [lifecycle_manager_navigation]: [34m[1mConfiguring planner_server[0m[0m
+[component_container_isolated-1] [INFO] [1773293362.091783247] [planner_server]: Configuring
+[component_container_isolated-1] [INFO] [1773293362.091885401] [global_costmap.global_costmap]: Configuring
+[component_container_isolated-1] [WARN] [1773293362.099323629] [amcl]: AMCL cannot publish a pose or update the transform. Please set the initial pose...
+[component_container_isolated-1] [INFO] [1773293362.099561111] [amcl]: Message Filter dropping message: frame 'laser_link' at time 1440.974 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[component_container_isolated-1] [INFO] [1773293362.104503001] [global_costmap.global_costmap]: Using plugin "static_layer"
+[component_container_isolated-1] [INFO] [1773293362.105861475] [global_costmap.global_costmap]: Subscribing to the map topic (/map) with transient local durability
+[component_container_isolated-1] [INFO] [1773293362.107588980] [global_costmap.global_costmap]: Initialized plugin "static_layer"
+[component_container_isolated-1] [INFO] [1773293362.107660767] [global_costmap.global_costmap]: Using plugin "obstacle_layer"
+[component_container_isolated-1] [INFO] [1773293362.108591157] [global_costmap.global_costmap]: Subscribed to Topics: scan
+[component_container_isolated-1] [INFO] [1773293362.112710943] [global_costmap.global_costmap]: Initialized plugin "obstacle_layer"
+[component_container_isolated-1] [INFO] [1773293362.112747372] [global_costmap.global_costmap]: Using plugin "inflation_layer"
+[component_container_isolated-1] [INFO] [1773293362.113475186] [global_costmap.global_costmap]: Initialized plugin "inflation_layer"
+[component_container_isolated-1] [INFO] [1773293362.122525010] [planner_server]: Created global planner plugin GridBased of type nav2_rrt_adaptive_step_planner/RRTAdaptiveStepPlanner
+[component_container_isolated-1] [INFO] [1773293362.126709920] [planner_server]: 轻量化自适应步长 RRT 已配置 (Cost-Based Step).
+[component_container_isolated-1] [INFO] [1773293362.126766358] [planner_server]: Planner Server has GridBased  planners available.
+[component_container_isolated-1] [INFO] [1773293362.139337449] [lifecycle_manager_navigation]: [34m[1mConfiguring behavior_server[0m[0m
+[component_container_isolated-1] [INFO] [1773293362.139561886] [behavior_server]: Configuring
+[component_container_isolated-1] [INFO] [1773293362.144274119] [behavior_server]: Creating behavior plugin spin of type nav2_behaviors/Spin
+[component_container_isolated-1] [INFO] [1773293362.145016822] [behavior_server]: Configuring spin
+[component_container_isolated-1] [INFO] [1773293362.148961385] [behavior_server]: Creating behavior plugin backup of type nav2_behaviors/BackUp
+[component_container_isolated-1] [INFO] [1773293362.150040637] [behavior_server]: Configuring backup
+[component_container_isolated-1] [INFO] [1773293362.155411764] [behavior_server]: Creating behavior plugin drive_on_heading of type nav2_behaviors/DriveOnHeading
+[component_container_isolated-1] [INFO] [1773293362.157049950] [behavior_server]: Configuring drive_on_heading
+[component_container_isolated-1] [INFO] [1773293362.163914517] [behavior_server]: Creating behavior plugin assisted_teleop of type nav2_behaviors/AssistedTeleop
+[component_container_isolated-1] [INFO] [1773293362.165649277] [behavior_server]: Configuring assisted_teleop
+[component_container_isolated-1] [INFO] [1773293362.167815898] [lifecycle_manager_localization]: Server amcl connected with bond.
+[component_container_isolated-1] [INFO] [1773293362.167890149] [lifecycle_manager_localization]: [34m[1mManaged nodes are active[0m[0m
+[component_container_isolated-1] [INFO] [1773293362.167910918] [lifecycle_manager_localization]: [34m[1mCreating bond timer...[0m[0m
+[component_container_isolated-1] [INFO] [1773293362.174323636] [behavior_server]: Creating behavior plugin wait of type nav2_behaviors/Wait
+[component_container_isolated-1] [INFO] [1773293362.175163203] [behavior_server]: Configuring wait
+[rviz2-2] [INFO] [1773293362.175226874] [rviz2]: Trying to create a map of size 376 x 222 using 1 swatches
+[component_container_isolated-1] [INFO] [1773293362.177716980] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 376 X 222 at 0.050000 m/pix
+[rviz2-2] [ERROR] [1773293362.179842824] [rviz2]: Vertex Program:rviz/glsl120/indexed_8bit_image.vert Fragment Program:rviz/glsl120/indexed_8bit_image.frag GLSL link result : 
+[rviz2-2] active samplers with a different type refer to the same texture image unit
+[component_container_isolated-1] [INFO] [1773293362.183071836] [lifecycle_manager_navigation]: [34m[1mConfiguring bt_navigator[0m[0m
+[component_container_isolated-1] [INFO] [1773293362.183239815] [bt_navigator]: Configuring
+[component_container_isolated-1] [INFO] [1773293362.264121300] [lifecycle_manager_navigation]: [34m[1mConfiguring waypoint_follower[0m[0m
+[component_container_isolated-1] [INFO] [1773293362.264246638] [waypoint_follower]: Configuring
+[component_container_isolated-1] [INFO] [1773293362.273287164] [waypoint_follower]: Created waypoint_task_executor : wait_at_waypoint of type nav2_waypoint_follower::WaitAtWaypoint
+[component_container_isolated-1] [INFO] [1773293362.273976034] [lifecycle_manager_navigation]: [34m[1mConfiguring velocity_smoother[0m[0m
+[component_container_isolated-1] [INFO] [1773293362.274133003] [velocity_smoother]: Configuring velocity smoother
+[component_container_isolated-1] [INFO] [1773293362.277755433] [lifecycle_manager_navigation]: [34m[1mActivating controller_server[0m[0m
+[component_container_isolated-1] [INFO] [1773293362.277881783] [controller_server]: Activating
+[component_container_isolated-1] [INFO] [1773293362.277912892] [local_costmap.local_costmap]: Activating
+[component_container_isolated-1] [INFO] [1773293362.277927640] [local_costmap.local_costmap]: Checking transform
+[component_container_isolated-1] [INFO] [1773293362.278025607] [local_costmap.local_costmap]: start
+[rviz2-2] [INFO] [1773293362.465607986] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1441.064 for reason 'discarding message because the queue is full'
+[component_container_isolated-1] [INFO] [1773293362.479451308] [controller_server]: Creating bond (controller_server) to lifecycle manager.
+[rviz2-2] [INFO] [1773293362.497714355] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1441.094 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293362.530035173] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1441.124 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293362.560913075] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1441.154 for reason 'discarding message because the queue is full'
+[component_container_isolated-1] [INFO] [1773293362.584296453] [lifecycle_manager_navigation]: Server controller_server connected with bond.
+[component_container_isolated-1] [INFO] [1773293362.584338222] [lifecycle_manager_navigation]: [34m[1mActivating smoother_server[0m[0m
+[component_container_isolated-1] [INFO] [1773293362.584606763] [smoother_server]: Activating
+[component_container_isolated-1] [INFO] [1773293362.584649163] [smoother_server]: Creating bond (smoother_server) to lifecycle manager.
+[rviz2-2] [INFO] [1773293362.593771345] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1441.184 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293362.625091549] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1441.224 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293362.657750269] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1441.254 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293362.689240135] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1441.284 for reason 'discarding message because the queue is full'
+[component_container_isolated-1] [INFO] [1773293362.690117384] [lifecycle_manager_navigation]: Server smoother_server connected with bond.
+[component_container_isolated-1] [INFO] [1773293362.690154495] [lifecycle_manager_navigation]: [34m[1mActivating planner_server[0m[0m
+[component_container_isolated-1] [INFO] [1773293362.690442673] [planner_server]: Activating
+[component_container_isolated-1] [INFO] [1773293362.690489692] [global_costmap.global_costmap]: Activating
+[component_container_isolated-1] [INFO] [1773293362.690501364] [global_costmap.global_costmap]: Checking transform
+[component_container_isolated-1] [INFO] [1773293362.690517104] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[rviz2-2] [INFO] [1773293362.721453538] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1441.314 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293362.753264235] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1441.344 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293362.785384551] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1441.384 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293362.817180851] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1441.414 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293362.849208350] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1441.444 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293362.881594121] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1441.474 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293362.913692705] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1441.504 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293362.945106187] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1441.544 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293362.977631813] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1441.574 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293363.009213214] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1441.604 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293363.041224751] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1441.634 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293363.073118826] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1441.664 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293363.105157926] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1441.694 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293363.137202065] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1441.734 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293363.169661796] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1441.764 for reason 'discarding message because the queue is full'
+[component_container_isolated-1] [INFO] [1773293363.190574763] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[rviz2-2] [INFO] [1773293363.201852754] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1441.794 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293363.233831440] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1441.824 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293363.265178483] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1441.854 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293363.297368330] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1441.894 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293363.329467154] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1441.924 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293363.361438505] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1441.954 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293363.393260783] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1441.984 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293363.425279825] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1442.014 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293363.457349342] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1442.054 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293363.489327747] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1442.084 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293363.521244685] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1442.114 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293363.553266181] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1442.144 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293363.585345889] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1442.174 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293363.617399607] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1442.214 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293363.649057712] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1442.244 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293363.681331358] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1442.274 for reason 'discarding message because the queue is full'
+[component_container_isolated-1] [INFO] [1773293363.690588155] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[rviz2-2] [INFO] [1773293363.713452094] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1442.304 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293363.745757691] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1442.334 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293363.777606248] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1442.374 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293363.809855037] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1442.404 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293363.841195278] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1442.434 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293363.873142864] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1442.464 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293363.905504177] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1442.494 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293363.937553907] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1442.534 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293363.969696514] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1442.564 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293364.001140723] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1442.594 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293364.033394009] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1442.624 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293364.065261010] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1442.654 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293364.097475473] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1442.694 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293364.129440250] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1442.724 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293364.161372496] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1442.754 for reason 'discarding message because the queue is full'
+[component_container_isolated-1] [INFO] [1773293364.190585549] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[rviz2-2] [INFO] [1773293364.193453634] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1442.784 for reason 'discarding message because the queue is full'
+[component_container_isolated-1] [WARN] [1773293364.196816400] [amcl]: AMCL cannot publish a pose or update the transform. Please set the initial pose...
+[rviz2-2] [INFO] [1773293364.225808404] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1442.814 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293364.257452060] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1442.854 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293364.289419533] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1442.884 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293364.321352209] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1442.914 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293364.353372592] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1442.944 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293364.385400269] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1442.974 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293364.417403380] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1443.014 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293364.449381713] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1443.044 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293364.481631933] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1443.074 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293364.481818669] [rviz2]: Message Filter dropping message: frame 'odom' at time 1441.435 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293364.513471793] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1443.104 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293364.545287627] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1443.134 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293364.577301027] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1443.174 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293364.609496894] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1443.204 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293364.641533939] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1443.234 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293364.673611712] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1443.264 for reason 'discarding message because the queue is full'
+[component_container_isolated-1] [INFO] [1773293364.690571549] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[rviz2-2] [INFO] [1773293364.705152733] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1443.294 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293364.705235180] [rviz2]: Message Filter dropping message: frame 'odom' at time 1441.635 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293364.737517411] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1443.334 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293364.769464355] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1443.364 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293364.801583455] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1443.394 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293364.833378240] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1443.424 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293364.865541074] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1443.454 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293364.897586154] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1443.494 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293364.897707384] [rviz2]: Message Filter dropping message: frame 'odom' at time 1441.835 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293364.929701638] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1443.524 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293364.961260694] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1443.554 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293364.993641282] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1443.584 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293365.029818059] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1443.614 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293365.060370850] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1443.654 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293365.089330981] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1443.684 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293365.089402267] [rviz2]: Message Filter dropping message: frame 'odom' at time 1442.035 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293365.121447947] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1443.714 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293365.153371114] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1443.744 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293365.185401064] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1443.774 for reason 'discarding message because the queue is full'
+[component_container_isolated-1] [INFO] [1773293365.190572380] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[rviz2-2] [INFO] [1773293365.217508592] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1443.814 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293365.249475943] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1443.844 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293365.281928868] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1443.874 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293365.282025752] [rviz2]: Message Filter dropping message: frame 'odom' at time 1442.235 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293365.313547455] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1443.904 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293365.345460703] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1443.944 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293365.377356929] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1443.974 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293365.409561091] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1444.004 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293365.441533692] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1444.034 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293365.473488218] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1444.064 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293365.505398411] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1444.094 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293365.505504753] [rviz2]: Message Filter dropping message: frame 'odom' at time 1442.435 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293365.537556915] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1444.134 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293365.569363220] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1444.164 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293365.601243656] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1444.194 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293365.633655552] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1444.224 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293365.665871957] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1444.254 for reason 'discarding message because the queue is full'
+[component_container_isolated-1] [INFO] [1773293365.690581865] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[rviz2-2] [INFO] [1773293365.697805784] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1444.294 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293365.697920463] [rviz2]: Message Filter dropping message: frame 'odom' at time 1442.635 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293365.729386340] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1444.324 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293365.761140435] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1444.354 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293365.792975565] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1444.384 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293365.825556333] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1444.414 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293365.857561896] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1444.454 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293365.889647532] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1444.484 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293365.889804030] [rviz2]: Message Filter dropping message: frame 'odom' at time 1442.835 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293365.921585227] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1444.514 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293365.953141727] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1444.544 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293365.985538364] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1444.574 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293366.017129279] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1444.614 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293366.049275699] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1444.644 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293366.081652127] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1444.674 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293366.081779960] [rviz2]: Message Filter dropping message: frame 'odom' at time 1443.035 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293366.113309928] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1444.704 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293366.145558933] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1444.734 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293366.177473843] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1444.774 for reason 'discarding message because the queue is full'
+[component_container_isolated-1] [INFO] [1773293366.190574831] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[rviz2-2] [INFO] [1773293366.209971011] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1444.804 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293366.241934644] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1444.834 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293366.273607233] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1444.864 for reason 'discarding message because the queue is full'
+[component_container_isolated-1] [WARN] [1773293366.298184517] [amcl]: AMCL cannot publish a pose or update the transform. Please set the initial pose...
+[rviz2-2] [INFO] [1773293366.305709569] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1444.894 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293366.305804860] [rviz2]: Message Filter dropping message: frame 'odom' at time 1443.235 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293366.337717005] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1444.924 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293366.369943237] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1444.964 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293366.401942027] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1444.994 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293366.433424024] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1445.024 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293366.465944485] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1445.054 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293366.497564815] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1445.094 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293366.497836272] [rviz2]: Message Filter dropping message: frame 'odom' at time 1443.435 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293366.529226834] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1445.124 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293366.561793634] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1445.154 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293366.593193214] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1445.184 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293366.625641509] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1445.214 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293366.657358192] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1445.254 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293366.689592990] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1445.284 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293366.689668033] [rviz2]: Message Filter dropping message: frame 'odom' at time 1443.635 for reason 'discarding message because the queue is full'
+[component_container_isolated-1] [INFO] [1773293366.690575519] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[rviz2-2] [INFO] [1773293366.721905316] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1445.314 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293366.753479889] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1445.344 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293366.785141307] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1445.374 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293366.817120138] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1445.404 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293366.849608830] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1445.444 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293366.881702590] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1445.474 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293366.881836615] [rviz2]: Message Filter dropping message: frame 'odom' at time 1443.835 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293366.913999065] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1445.504 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293366.945724986] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1445.534 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293366.977694861] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1445.574 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293367.009770005] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1445.604 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293367.041657582] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1445.634 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293367.073614050] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1445.664 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293367.105622016] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1445.694 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293367.105741693] [rviz2]: Message Filter dropping message: frame 'odom' at time 1444.035 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293367.137511356] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1445.724 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293367.169439690] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1445.764 for reason 'discarding message because the queue is full'
+[component_container_isolated-1] [INFO] [1773293367.190573234] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[rviz2-2] [INFO] [1773293367.201519352] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1445.794 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293367.233745473] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1445.824 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293367.265507852] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1445.854 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293367.297489597] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1445.894 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293367.297607131] [rviz2]: Message Filter dropping message: frame 'odom' at time 1444.235 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293367.329650133] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1445.924 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293367.361831078] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1445.954 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293367.393186773] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1445.984 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293367.425694920] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1446.014 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293367.457443182] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1446.044 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293367.489946360] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1446.084 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293367.490062310] [rviz2]: Message Filter dropping message: frame 'odom' at time 1444.435 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293367.521833335] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1446.114 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293367.553630270] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1446.144 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293367.585507046] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1446.174 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293367.617975317] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1446.204 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293367.650110425] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1446.244 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293367.682089085] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1446.274 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293367.682216788] [rviz2]: Message Filter dropping message: frame 'odom' at time 1444.635 for reason 'discarding message because the queue is full'
+[component_container_isolated-1] [INFO] [1773293367.690588269] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[rviz2-2] [INFO] [1773293367.713295837] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1446.304 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293367.745134791] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1446.334 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293367.777471783] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1446.364 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293367.809739272] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1446.404 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293367.842015899] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1446.434 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293367.873615217] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1446.464 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293367.905563269] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1446.494 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293367.905637250] [rviz2]: Message Filter dropping message: frame 'odom' at time 1444.835 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293367.937501753] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1446.524 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293367.969472858] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1446.564 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293368.001920440] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1446.594 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293368.033605952] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1446.624 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293368.065653561] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1446.654 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293368.097792725] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1446.684 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293368.097913525] [rviz2]: Message Filter dropping message: frame 'odom' at time 1445.035 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293368.129498315] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1446.724 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293368.161604436] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1446.754 for reason 'discarding message because the queue is full'
+[component_container_isolated-1] [INFO] [1773293368.190581707] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[rviz2-2] [INFO] [1773293368.193991151] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1446.784 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293368.225712340] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1446.814 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293368.257878115] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1446.844 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293368.289835172] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1446.884 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293368.289985137] [rviz2]: Message Filter dropping message: frame 'odom' at time 1445.235 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293368.321892130] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1446.914 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293368.353738056] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1446.944 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293368.385956872] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1446.974 for reason 'discarding message because the queue is full'
+[component_container_isolated-1] [WARN] [1773293368.399366565] [amcl]: AMCL cannot publish a pose or update the transform. Please set the initial pose...
+[rviz2-2] [INFO] [1773293368.417441751] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1447.004 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293368.449469353] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1447.044 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293368.481315219] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1447.074 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293368.481424277] [rviz2]: Message Filter dropping message: frame 'odom' at time 1445.435 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293368.513587106] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1447.104 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293368.545561927] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1447.134 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293368.577536829] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1447.164 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293368.609580060] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1447.204 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293368.641836658] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1447.234 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293368.673618402] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1447.264 for reason 'discarding message because the queue is full'
+[component_container_isolated-1] [INFO] [1773293368.690572296] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[rviz2-2] [INFO] [1773293368.705646515] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1447.294 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293368.705805577] [rviz2]: Message Filter dropping message: frame 'odom' at time 1445.635 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293368.705846535] [rviz2]: Message Filter dropping message: frame 'odom' at time 1441.438 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293368.737619683] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1447.324 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293368.769676450] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1447.364 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293368.801895256] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1447.394 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293368.833401076] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1447.424 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293368.865894774] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1447.454 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293368.897714360] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1447.484 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293368.897807257] [rviz2]: Message Filter dropping message: frame 'odom' at time 1445.835 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293368.929839377] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1447.524 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293368.961747882] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1447.554 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293368.993601874] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1447.584 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293369.025701462] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1447.614 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293369.057775000] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1447.644 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293369.089749600] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1447.684 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293369.089826876] [rviz2]: Message Filter dropping message: frame 'odom' at time 1446.015 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293369.122002478] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1447.714 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293369.154369955] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1447.744 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293369.186131480] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1447.774 for reason 'discarding message because the queue is full'
+[component_container_isolated-1] [INFO] [1773293369.190580050] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[rviz2-2] [INFO] [1773293369.217988286] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1447.804 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293369.249867845] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1447.844 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293369.282070779] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1447.874 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293369.282163655] [rviz2]: Message Filter dropping message: frame 'odom' at time 1446.215 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293369.282220063] [rviz2]: Message Filter dropping message: frame 'odom' at time 1442.138 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293369.313868372] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1447.904 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293369.345856688] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1447.934 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293369.377291842] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1447.964 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293369.409630133] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1448.004 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293369.441555429] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1448.034 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293369.473194401] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1448.064 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293369.505583298] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1448.094 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293369.505672348] [rviz2]: Message Filter dropping message: frame 'odom' at time 1446.415 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293369.537646286] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1448.124 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293369.570091531] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1448.164 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293369.601548867] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1448.194 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293369.633848134] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1448.224 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293369.666061829] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1448.254 for reason 'discarding message because the queue is full'
+[component_container_isolated-1] [INFO] [1773293369.690583064] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[rviz2-2] [INFO] [1773293369.697746948] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1448.284 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293369.697846317] [rviz2]: Message Filter dropping message: frame 'odom' at time 1446.615 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293369.730056435] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1448.324 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293369.761982061] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1448.354 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293369.793422305] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1448.384 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293369.826071417] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1448.414 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293369.857090189] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1448.444 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293369.889494817] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1448.484 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293369.889609535] [rviz2]: Message Filter dropping message: frame 'odom' at time 1446.815 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293369.889673938] [rviz2]: Message Filter dropping message: frame 'odom' at time 1442.738 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293369.921804704] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1448.514 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293369.953923689] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1448.544 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293369.985505832] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1448.574 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293370.017980793] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1448.604 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293370.050281421] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1448.644 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293370.081831853] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1448.674 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293370.081982800] [rviz2]: Message Filter dropping message: frame 'odom' at time 1447.015 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293370.113230136] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1448.704 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293370.145216887] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1448.734 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293370.177842193] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1448.764 for reason 'discarding message because the queue is full'
+[component_container_isolated-1] [INFO] [1773293370.190586771] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[rviz2-2] [INFO] [1773293370.209197143] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1448.794 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293370.241723561] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1448.834 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293370.273768013] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1448.864 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293370.305896935] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1448.894 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293370.305972739] [rviz2]: Message Filter dropping message: frame 'odom' at time 1447.215 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293370.337630846] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1448.924 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293370.369912528] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1448.964 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293370.401505471] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1448.994 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293370.433476392] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1449.024 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293370.466287371] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1449.054 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293370.498071688] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1449.084 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293370.498169344] [rviz2]: Message Filter dropping message: frame 'odom' at time 1447.415 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293370.498209771] [rviz2]: Message Filter dropping message: frame 'odom' at time 1443.338 for reason 'discarding message because the queue is full'
+[component_container_isolated-1] [WARN] [1773293370.501285410] [amcl]: AMCL cannot publish a pose or update the transform. Please set the initial pose...
+[rviz2-2] [INFO] [1773293370.530046787] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1449.114 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293370.561398351] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1449.154 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293370.594172941] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1449.184 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293370.625749082] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1449.214 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293370.657553957] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1449.244 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293370.689925290] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1449.284 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293370.690015903] [rviz2]: Message Filter dropping message: frame 'odom' at time 1447.615 for reason 'discarding message because the queue is full'
+[component_container_isolated-1] [INFO] [1773293370.690576459] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[rviz2-2] [INFO] [1773293370.721639394] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1449.314 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293370.753878134] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1449.344 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293370.785724810] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1449.374 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293370.818238634] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1449.404 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293370.819288520] [rviz2]: Setting estimate pose: Frame:map, Position(-0.0062501, -0.00312485, 0), Orientation(0, 0, -1.84757e-06, 1) = Angle: -3.69513e-06
+[component_container_isolated-1] [INFO] [1773293370.819695564] [amcl]: initialPoseReceived
+[component_container_isolated-1] [INFO] [1773293370.819840199] [amcl]: Setting pose (1449.738000): -0.006 -0.003 -0.000
+[rviz2-2] [INFO] [1773293370.849244740] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1449.434 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293370.881183631] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1449.474 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293370.881801286] [rviz2]: Message Filter dropping message: frame 'odom' at time 1447.815 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293370.913389209] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1449.504 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293370.945578916] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1449.534 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293370.977372470] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1449.564 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293371.009167647] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1449.594 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293371.041359177] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1449.634 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293371.073649796] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1449.664 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293371.105743960] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1449.694 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293371.105833360] [rviz2]: Message Filter dropping message: frame 'odom' at time 1448.015 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293371.105876352] [rviz2]: Message Filter dropping message: frame 'odom' at time 1443.938 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293371.137954296] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1449.724 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293371.169652698] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1449.754 for reason 'discarding message because the queue is full'
+[component_container_isolated-1] [INFO] [1773293371.190611496] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Lookup would require extrapolation into the past.  Requested time 1450.135000 but the earliest data is at time 1450.264000, when looking up transform from frame [base_link] to frame [map]
+[rviz2-2] [INFO] [1773293371.201830722] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1449.794 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293371.233967998] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1449.824 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293371.265339228] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1449.854 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293371.297780894] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1449.884 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293371.297890332] [rviz2]: Message Filter dropping message: frame 'odom' at time 1448.215 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293371.329862635] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1449.914 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293371.361851950] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1449.954 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293371.490625573] [rviz2]: Message Filter dropping message: frame 'odom' at time 1448.415 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293371.683730859] [rviz2]: Message Filter dropping message: frame 'odom' at time 1444.538 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1773293371.688285911] [rviz2]: Trying to create a map of size 60 x 60 using 1 swatches
+[component_container_isolated-1] [INFO] [1773293371.690849617] [global_costmap.global_costmap]: start
+[component_container_isolated-1] [INFO] [1773293372.694407702] [planner_server]: Creating bond (planner_server) to lifecycle manager.
+[rviz2-2] [INFO] [1773293372.708491225] [rviz2]: Trying to create a map of size 376 x 222 using 1 swatches
+[component_container_isolated-1] [INFO] [1773293372.798703411] [lifecycle_manager_navigation]: Server planner_server connected with bond.
+[component_container_isolated-1] [INFO] [1773293372.798787200] [lifecycle_manager_navigation]: [34m[1mActivating behavior_server[0m[0m
+[component_container_isolated-1] [INFO] [1773293372.799320154] [behavior_server]: Activating
+[component_container_isolated-1] [INFO] [1773293372.799365941] [behavior_server]: Activating spin
+[component_container_isolated-1] [INFO] [1773293372.799429552] [behavior_server]: Activating backup
+[component_container_isolated-1] [INFO] [1773293372.799449209] [behavior_server]: Activating drive_on_heading
+[component_container_isolated-1] [INFO] [1773293372.799534692] [behavior_server]: Activating assisted_teleop
+[component_container_isolated-1] [INFO] [1773293372.799551283] [behavior_server]: Activating wait
+[component_container_isolated-1] [INFO] [1773293372.799566362] [behavior_server]: Creating bond (behavior_server) to lifecycle manager.
+[component_container_isolated-1] [INFO] [1773293372.903890225] [lifecycle_manager_navigation]: Server behavior_server connected with bond.
+[component_container_isolated-1] [INFO] [1773293372.903941342] [lifecycle_manager_navigation]: [34m[1mActivating bt_navigator[0m[0m
+[component_container_isolated-1] [INFO] [1773293372.904225071] [bt_navigator]: Activating
+[component_container_isolated-1] [INFO] [1773293372.953802202] [bt_navigator]: Creating bond (bt_navigator) to lifecycle manager.
+[component_container_isolated-1] [INFO] [1773293373.058269605] [lifecycle_manager_navigation]: Server bt_navigator connected with bond.
+[component_container_isolated-1] [INFO] [1773293373.058310884] [lifecycle_manager_navigation]: [34m[1mActivating waypoint_follower[0m[0m
+[component_container_isolated-1] [INFO] [1773293373.058546492] [waypoint_follower]: Activating
+[component_container_isolated-1] [INFO] [1773293373.058579324] [waypoint_follower]: Creating bond (waypoint_follower) to lifecycle manager.
+[component_container_isolated-1] [INFO] [1773293373.163485420] [lifecycle_manager_navigation]: Server waypoint_follower connected with bond.
+[component_container_isolated-1] [INFO] [1773293373.163520266] [lifecycle_manager_navigation]: [34m[1mActivating velocity_smoother[0m[0m
+[component_container_isolated-1] [INFO] [1773293373.163753159] [velocity_smoother]: Activating
+[component_container_isolated-1] [INFO] [1773293373.163796551] [velocity_smoother]: Creating bond (velocity_smoother) to lifecycle manager.
+[component_container_isolated-1] [INFO] [1773293373.269045739] [lifecycle_manager_navigation]: Server velocity_smoother connected with bond.
+[component_container_isolated-1] [INFO] [1773293373.269083742] [lifecycle_manager_navigation]: [34m[1mManaged nodes are active[0m[0m
+[component_container_isolated-1] [INFO] [1773293373.269096376] [lifecycle_manager_navigation]: [34m[1mCreating bond timer...[0m[0m
+[rviz2-2] [INFO] [1773293375.705591060] [rviz2]: Message Filter dropping message: frame 'odom' at time 1445.138 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-2] [INFO] [1773293376.305021102] [rviz2]: Message Filter dropping message: frame 'odom' at time 1445.738 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-2] [INFO] [1773293376.906007693] [rviz2]: Message Filter dropping message: frame 'odom' at time 1446.338 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-2] [INFO] [1773293377.506168323] [rviz2]: Message Filter dropping message: frame 'odom' at time 1446.938 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-2] [INFO] [1773293378.106753583] [rviz2]: Message Filter dropping message: frame 'odom' at time 1447.538 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-2] [INFO] [1773293378.706535345] [rviz2]: Message Filter dropping message: frame 'odom' at time 1448.138 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-2] [INFO] [1773293379.186758715] [rviz2]: Message Filter dropping message: frame 'odom' at time 1448.615 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-2] [INFO] [1773293379.307268766] [rviz2]: Message Filter dropping message: frame 'odom' at time 1448.738 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-2] [INFO] [1773293379.386997293] [rviz2]: Message Filter dropping message: frame 'odom' at time 1448.815 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-2] [INFO] [1773293379.586974635] [rviz2]: Message Filter dropping message: frame 'odom' at time 1449.015 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-2] [INFO] [1773293379.787411210] [rviz2]: Message Filter dropping message: frame 'odom' at time 1449.215 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-2] [INFO] [1773293379.907113264] [rviz2]: Message Filter dropping message: frame 'odom' at time 1449.338 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-2] [INFO] [1773293379.986925752] [rviz2]: Message Filter dropping message: frame 'odom' at time 1449.415 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-2] [INFO] [1773293380.187179241] [rviz2]: Message Filter dropping message: frame 'odom' at time 1449.615 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-2] [INFO] [1773293380.387022661] [rviz2]: Message Filter dropping message: frame 'odom' at time 1449.815 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-2] [INFO] [1773293380.507528048] [rviz2]: Message Filter dropping message: frame 'odom' at time 1449.938 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-2] [INFO] [1773293380.587613792] [rviz2]: Message Filter dropping message: frame 'odom' at time 1450.015 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-2] [INFO] [1773293380.787579664] [rviz2]: Message Filter dropping message: frame 'odom' at time 1450.215 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-2] [INFO] [1773293381.047326732] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1449.984 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-2] [INFO] [1773293381.067638672] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1450.014 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-2] [INFO] [1773293381.107446720] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1450.044 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-2] [INFO] [1773293381.127733443] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1450.074 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-2] [INFO] [1773293381.167772420] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1450.114 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-2] [INFO] [1773293381.207478696] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1450.144 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-2] [INFO] [1773293381.227921324] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1450.174 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-2] [INFO] [1773293381.267663278] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1450.204 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-2] [INFO] [1773293381.287458916] [rviz2]: Message Filter dropping message: frame 'laser_link' at time 1450.234 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-2] Start navigation
+[rviz2-2] [INFO] [1773293381.981163098] [rviz_navigation_dialog_action_client]: NavigateToPose will be called using the BT Navigator's default behavior tree.
+[component_container_isolated-1] [INFO] [1773293381.981927041] [bt_navigator]: Begin navigating from current location (-0.04, -0.01) to (-5.00, 2.00)
+[component_container_isolated-1] [INFO] [1773293381.986819062] [planner_server]: 规划成功 | 采样节点数: 257 | 耗时: 4.27 ms
+[component_container_isolated-1] [INFO] [1773293382.002521548] [controller_server]: Received a goal, begin computing control effort.
+[component_container_isolated-1] [WARN] [1773293382.002593315] [controller_server]: No goal checker was specified in parameter 'current_goal_checker'. Server will use only plugin loaded general_goal_checker . This warning will appear once.
+[component_container_isolated-1] [INFO] [1773293383.028557648] [planner_server]: 规划成功 | 采样节点数: 564 | 耗时: 16.06 ms
+[component_container_isolated-1] [INFO] [1773293383.052842640] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293384.066841864] [planner_server]: 规划成功 | 采样节点数: 513 | 耗时: 14.45 ms
+[component_container_isolated-1] [INFO] [1773293384.102844764] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293385.114690482] [planner_server]: 规划成功 | 采样节点数: 657 | 耗时: 22.16 ms
+[component_container_isolated-1] [WARN] [1773293385.114930559] [planner_server]: Planner loop missed its desired rate of 20.0000 Hz. Current loop rate is 10.0000 Hz
+[component_container_isolated-1] [INFO] [1773293385.152841936] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293386.144667131] [planner_server]: 规划成功 | 采样节点数: 202 | 耗时: 2.32 ms
+[component_container_isolated-1] [INFO] [1773293386.202858212] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293387.181361632] [planner_server]: 规划成功 | 采样节点数: 390 | 耗时: 9.10 ms
+[component_container_isolated-1] [INFO] [1773293387.202842179] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293388.211528501] [planner_server]: 规划成功 | 采样节点数: 409 | 耗时: 9.03 ms
+[component_container_isolated-1] [INFO] [1773293388.252852802] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293389.239500468] [planner_server]: 规划成功 | 采样节点数: 360 | 耗时: 7.10 ms
+[component_container_isolated-1] [INFO] [1773293389.252852260] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293390.270403657] [planner_server]: 规划成功 | 采样节点数: 382 | 耗时: 8.12 ms
+[component_container_isolated-1] [INFO] [1773293390.302847262] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293391.308619226] [planner_server]: 规划成功 | 采样节点数: 511 | 耗时: 16.15 ms
+[component_container_isolated-1] [WARN] [1773293391.308846187] [planner_server]: Planner loop missed its desired rate of 20.0000 Hz. Current loop rate is 10.0000 Hz
+[component_container_isolated-1] [INFO] [1773293391.352862431] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293392.361281536] [planner_server]: 规划成功 | 采样节点数: 732 | 耗时: 28.70 ms
+[component_container_isolated-1] [INFO] [1773293392.402842090] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293393.389592145] [planner_server]: 规划成功 | 采样节点数: 363 | 耗时: 7.29 ms
+[component_container_isolated-1] [INFO] [1773293393.402844537] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293394.421892619] [planner_server]: 规划成功 | 采样节点数: 397 | 耗时: 9.57 ms
+[component_container_isolated-1] [INFO] [1773293394.452843572] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293395.466446493] [planner_server]: 规划成功 | 采样节点数: 681 | 耗时: 24.02 ms
+[component_container_isolated-1] [INFO] [1773293395.502848878] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293396.503721732] [planner_server]: 规划成功 | 采样节点数: 485 | 耗时: 11.19 ms
+[component_container_isolated-1] [WARN] [1773293396.503809159] [planner_server]: Planner loop missed its desired rate of 20.0000 Hz. Current loop rate is 10.0000 Hz
+[component_container_isolated-1] [INFO] [1773293396.552858891] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293397.543426309] [planner_server]: 规划成功 | 采样节点数: 454 | 耗时: 11.03 ms
+[component_container_isolated-1] [INFO] [1773293397.602851691] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293398.577774614] [planner_server]: 规划成功 | 采样节点数: 315 | 耗时: 5.28 ms
+[component_container_isolated-1] [INFO] [1773293398.602857980] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293399.612368326] [planner_server]: 规划成功 | 采样节点数: 414 | 耗时: 9.99 ms
+[component_container_isolated-1] [INFO] [1773293399.652851390] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293400.654250190] [planner_server]: 规划成功 | 采样节点数: 454 | 耗时: 11.96 ms
+[component_container_isolated-1] [INFO] [1773293400.702849870] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293401.684157074] [planner_server]: 规划成功 | 采样节点数: 174 | 耗时: 1.89 ms
+[component_container_isolated-1] [INFO] [1773293401.702848939] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293402.719748282] [planner_server]: 规划成功 | 采样节点数: 365 | 耗时: 7.24 ms
+[component_container_isolated-1] [INFO] [1773293402.752845816] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293403.759303525] [planner_server]: 规划成功 | 采样节点数: 612 | 耗时: 16.99 ms
+[component_container_isolated-1] [INFO] [1773293403.802850847] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293404.789646239] [planner_server]: 规划成功 | 采样节点数: 380 | 耗时: 7.26 ms
+[component_container_isolated-1] [INFO] [1773293404.802839703] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293405.818628368] [planner_server]: 规划成功 | 采样节点数: 333 | 耗时: 6.25 ms
+[component_container_isolated-1] [INFO] [1773293405.852855315] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293406.851167188] [planner_server]: 规划成功 | 采样节点数: 383 | 耗时: 8.40 ms
+[component_container_isolated-1] [INFO] [1773293406.902857250] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293407.874189504] [planner_server]: 规划成功 | 采样节点数: 172 | 耗时: 1.88 ms
+[component_container_isolated-1] [INFO] [1773293407.902851863] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293408.914139590] [planner_server]: 规划成功 | 采样节点数: 449 | 耗时: 11.71 ms
+[component_container_isolated-1] [WARN] [1773293408.914238909] [planner_server]: Planner loop missed its desired rate of 20.0000 Hz. Current loop rate is 10.0000 Hz
+[component_container_isolated-1] [INFO] [1773293408.952847178] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293409.948233288] [planner_server]: 规划成功 | 采样节点数: 344 | 耗时: 5.87 ms
+[component_container_isolated-1] [INFO] [1773293410.002841970] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293410.977600996] [planner_server]: 规划成功 | 采样节点数: 318 | 耗时: 5.18 ms
+[component_container_isolated-1] [INFO] [1773293411.002851679] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293412.019155663] [planner_server]: 规划成功 | 采样节点数: 599 | 耗时: 16.82 ms
+[component_container_isolated-1] [WARN] [1773293412.019236646] [planner_server]: Planner loop missed its desired rate of 20.0000 Hz. Current loop rate is 10.0000 Hz
+[component_container_isolated-1] [INFO] [1773293412.052847273] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293413.053197253] [planner_server]: 规划成功 | 采样节点数: 445 | 耗时: 10.84 ms
+[component_container_isolated-1] [INFO] [1773293413.102854980] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293414.090319038] [planner_server]: 规划成功 | 采样节点数: 385 | 耗时: 8.01 ms
+[component_container_isolated-1] [INFO] [1773293414.102844848] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293415.123082783] [planner_server]: 规划成功 | 采样节点数: 457 | 耗时: 10.45 ms
+[component_container_isolated-1] [INFO] [1773293415.152850083] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293416.162484342] [planner_server]: 规划成功 | 采样节点数: 448 | 耗时: 10.04 ms
+[component_container_isolated-1] [INFO] [1773293416.202854717] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293417.196735406] [planner_server]: 规划成功 | 采样节点数: 279 | 耗时: 4.31 ms
+[component_container_isolated-1] [INFO] [1773293417.252847188] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293418.235970330] [planner_server]: 规划成功 | 采样节点数: 524 | 耗时: 13.52 ms
+[component_container_isolated-1] [INFO] [1773293418.252847086] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293419.269238981] [planner_server]: 规划成功 | 采样节点数: 384 | 耗时: 6.79 ms
+[component_container_isolated-1] [INFO] [1773293419.302856312] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293420.294086754] [planner_server]: 规划成功 | 采样节点数: 154 | 耗时: 1.62 ms
+[component_container_isolated-1] [INFO] [1773293420.352849397] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293421.329795585] [planner_server]: 规划成功 | 采样节点数: 367 | 耗时: 7.06 ms
+[component_container_isolated-1] [INFO] [1773293421.352850937] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293422.355395442] [planner_server]: 规划成功 | 采样节点数: 236 | 耗时: 3.01 ms
+[component_container_isolated-1] [INFO] [1773293422.402846160] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293423.389288246] [planner_server]: 规划成功 | 采样节点数: 354 | 耗时: 6.86 ms
+[component_container_isolated-1] [INFO] [1773293423.402857255] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293424.414043043] [planner_server]: 规划成功 | 采样节点数: 167 | 耗时: 1.55 ms
+[component_container_isolated-1] [INFO] [1773293424.452849115] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293425.447135802] [planner_server]: 规划成功 | 采样节点数: 280 | 耗时: 4.79 ms
+[component_container_isolated-1] [INFO] [1773293425.502842820] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293426.480021380] [planner_server]: 规划成功 | 采样节点数: 353 | 耗时: 7.69 ms
+[component_container_isolated-1] [INFO] [1773293426.502847612] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293427.513402862] [planner_server]: 规划成功 | 采样节点数: 462 | 耗时: 10.91 ms
+[component_container_isolated-1] [INFO] [1773293427.552843876] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293428.551070008] [planner_server]: 规划成功 | 采样节点数: 383 | 耗时: 8.55 ms
+[component_container_isolated-1] [INFO] [1773293428.602856332] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293429.574996735] [planner_server]: 规划成功 | 采样节点数: 208 | 耗时: 2.46 ms
+[component_container_isolated-1] [INFO] [1773293429.602851226] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293430.606510547] [planner_server]: 规划成功 | 采样节点数: 242 | 耗时: 4.04 ms
+[component_container_isolated-1] [INFO] [1773293430.652859248] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293431.638753496] [planner_server]: 规划成功 | 采样节点数: 325 | 耗时: 6.26 ms
+[component_container_isolated-1] [INFO] [1773293431.652847819] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293432.663816241] [planner_server]: 规划成功 | 采样节点数: 145 | 耗时: 1.47 ms
+[component_container_isolated-1] [INFO] [1773293432.702846257] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293433.696399643] [planner_server]: 规划成功 | 采样节点数: 280 | 耗时: 4.06 ms
+[component_container_isolated-1] [INFO] [1773293433.752857802] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293434.724464195] [planner_server]: 规划成功 | 采样节点数: 196 | 耗时: 2.16 ms
+[component_container_isolated-1] [WARN] [1773293434.724606676] [planner_server]: Planner loop missed its desired rate of 20.0000 Hz. Current loop rate is 10.0000 Hz
+[component_container_isolated-1] [INFO] [1773293434.752852546] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293435.754804063] [planner_server]: 规划成功 | 采样节点数: 200 | 耗时: 2.37 ms
+[component_container_isolated-1] [INFO] [1773293435.802848417] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293436.793670097] [planner_server]: 规划成功 | 采样节点数: 465 | 耗时: 11.25 ms
+[component_container_isolated-1] [INFO] [1773293436.852853326] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293437.823735079] [planner_server]: 规划成功 | 采样节点数: 152 | 耗时: 1.34 ms
+[component_container_isolated-1] [INFO] [1773293437.852851920] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293438.859326309] [planner_server]: 规划成功 | 采样节点数: 325 | 耗时: 6.80 ms
+[component_container_isolated-1] [INFO] [1773293438.902854040] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293439.886234993] [planner_server]: 规划成功 | 采样节点数: 269 | 耗时: 3.67 ms
+[component_container_isolated-1] [INFO] [1773293439.902847193] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293440.916283714] [planner_server]: 规划成功 | 采样节点数: 274 | 耗时: 3.95 ms
+[component_container_isolated-1] [INFO] [1773293440.952845452] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293441.965858201] [planner_server]: 规划成功 | 采样节点数: 716 | 耗时: 23.36 ms
+[component_container_isolated-1] [INFO] [1773293442.002855905] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293442.994323561] [planner_server]: 规划成功 | 采样节点数: 181 | 耗时: 1.97 ms
+[component_container_isolated-1] [INFO] [1773293443.052875537] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293444.031365422] [planner_server]: 规划成功 | 采样节点数: 411 | 耗时: 9.07 ms
+[component_container_isolated-1] [WARN] [1773293444.031443690] [planner_server]: Planner loop missed its desired rate of 20.0000 Hz. Current loop rate is 10.0000 Hz
+[component_container_isolated-1] [INFO] [1773293444.052854751] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293445.064707660] [planner_server]: 规划成功 | 采样节点数: 454 | 耗时: 12.26 ms
+[component_container_isolated-1] [INFO] [1773293445.102851216] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293446.093904801] [planner_server]: 规划成功 | 采样节点数: 144 | 耗时: 1.48 ms
+[component_container_isolated-1] [INFO] [1773293446.152862250] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293447.128345562] [planner_server]: 规划成功 | 采样节点数: 323 | 耗时: 5.97 ms
+[component_container_isolated-1] [INFO] [1773293447.152851628] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293448.155863021] [planner_server]: 规划成功 | 采样节点数: 224 | 耗时: 3.49 ms
+[component_container_isolated-1] [INFO] [1773293448.202851108] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293449.183710902] [planner_server]: 规划成功 | 采样节点数: 162 | 耗时: 1.42 ms
+[component_container_isolated-1] [INFO] [1773293449.202846188] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293450.214730048] [planner_server]: 规划成功 | 采样节点数: 210 | 耗时: 2.38 ms
+[component_container_isolated-1] [INFO] [1773293450.252850824] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293451.246457114] [planner_server]: 规划成功 | 采样节点数: 241 | 耗时: 3.74 ms
+[component_container_isolated-1] [INFO] [1773293451.302857648] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [ERROR] [1773293451.452954025] [controller_server]: Failed to make progress
+[component_container_isolated-1] [WARN] [1773293451.453075375] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[component_container_isolated-1] [INFO] [1773293451.472172858] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[component_container_isolated-1] [INFO] [1773293451.472492445] [controller_server]: Received a goal, begin computing control effort.
+[component_container_isolated-1] [INFO] [1773293452.274103835] [planner_server]: 规划成功 | 采样节点数: 178 | 耗时: 1.73 ms
+[component_container_isolated-1] [INFO] [1773293452.322694128] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293453.303990374] [planner_server]: 规划成功 | 采样节点数: 170 | 耗时: 1.58 ms
+[component_container_isolated-1] [INFO] [1773293453.322707213] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293454.338393092] [planner_server]: 规划成功 | 采样节点数: 326 | 耗时: 6.11 ms
+[component_container_isolated-1] [WARN] [1773293454.338528239] [planner_server]: Planner loop missed its desired rate of 20.0000 Hz. Current loop rate is 10.0000 Hz
+[component_container_isolated-1] [INFO] [1773293454.372692127] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293455.363020655] [planner_server]: 规划成功 | 采样节点数: 96 | 耗时: 0.67 ms
+[component_container_isolated-1] [INFO] [1773293455.422699607] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293456.395850997] [planner_server]: 规划成功 | 采样节点数: 214 | 耗时: 3.40 ms
+[component_container_isolated-1] [INFO] [1773293456.422695716] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293457.424275639] [planner_server]: 规划成功 | 采样节点数: 155 | 耗时: 1.83 ms
+[component_container_isolated-1] [INFO] [1773293457.472691913] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293458.457797934] [planner_server]: 规划成功 | 采样节点数: 310 | 耗时: 5.40 ms
+[component_container_isolated-1] [INFO] [1773293458.472694887] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293459.490658447] [planner_server]: 规划成功 | 采样节点数: 391 | 耗时: 8.10 ms
+[component_container_isolated-1] [INFO] [1773293459.522692425] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293460.516490942] [planner_server]: 规划成功 | 采样节点数: 282 | 耗时: 4.12 ms
+[component_container_isolated-1] [INFO] [1773293460.572691220] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293461.547253943] [planner_server]: 规划成功 | 采样节点数: 291 | 耗时: 4.80 ms
+[component_container_isolated-1] [INFO] [1773293461.572694451] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [ERROR] [1773293461.572917445] [controller_server]: Failed to make progress
+[component_container_isolated-1] [WARN] [1773293461.572946921] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[component_container_isolated-1] [INFO] [1773293461.602204516] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[component_container_isolated-1] [INFO] [1773293461.602361394] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[component_container_isolated-1] [INFO] [1773293461.696853807] [planner_server]: 规划成功 | 采样节点数: 277 | 耗时: 4.09 ms
+[component_container_isolated-1] [WARN] [1773293461.696911406] [planner_server]: Planner loop missed its desired rate of 20.0000 Hz. Current loop rate is 10.0000 Hz
+[component_container_isolated-1] [INFO] [1773293461.712332583] [controller_server]: Received a goal, begin computing control effort.
+[component_container_isolated-1] [INFO] [1773293462.726320116] [planner_server]: 规划成功 | 采样节点数: 266 | 耗时: 4.00 ms
+[component_container_isolated-1] [INFO] [1773293462.762517946] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293463.764916754] [planner_server]: 规划成功 | 采样节点数: 451 | 耗时: 12.18 ms
+[component_container_isolated-1] [INFO] [1773293463.812515967] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293464.803916240] [planner_server]: 规划成功 | 采样节点数: 445 | 耗时: 11.57 ms
+[component_container_isolated-1] [INFO] [1773293464.862511487] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293465.834595217] [planner_server]: 规划成功 | 采样节点数: 168 | 耗时: 1.95 ms
+[component_container_isolated-1] [INFO] [1773293465.862510139] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293466.872092311] [planner_server]: 规划成功 | 采样节点数: 414 | 耗时: 9.77 ms
+[component_container_isolated-1] [INFO] [1773293466.912510048] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293467.906263177] [planner_server]: 规划成功 | 采样节点数: 251 | 耗时: 3.92 ms
+[component_container_isolated-1] [INFO] [1773293467.962519047] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293468.938535103] [planner_server]: 规划成功 | 采样节点数: 323 | 耗时: 6.19 ms
+[component_container_isolated-1] [INFO] [1773293468.962525373] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293469.963968313] [planner_server]: 规划成功 | 采样节点数: 126 | 耗时: 1.39 ms
+[component_container_isolated-1] [INFO] [1773293470.012517279] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293470.997389250] [planner_server]: 规划成功 | 采样节点数: 307 | 耗时: 5.01 ms
+[component_container_isolated-1] [INFO] [1773293471.012513669] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [ERROR] [1773293471.762554561] [controller_server]: Failed to make progress
+[component_container_isolated-1] [WARN] [1773293471.762615356] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[component_container_isolated-1] [INFO] [1773293471.782231250] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[component_container_isolated-1] [INFO] [1773293471.782763851] [controller_server]: Received a goal, begin computing control effort.
+[component_container_isolated-1] [WARN] [1773293471.886038574] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-1] [INFO] [1773293472.029496409] [planner_server]: 规划成功 | 采样节点数: 361 | 耗时: 7.20 ms
+[component_container_isolated-1] [INFO] [1773293472.044066786] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293473.054553292] [planner_server]: 规划成功 | 采样节点数: 190 | 耗时: 2.15 ms
+[component_container_isolated-1] [INFO] [1773293473.086102415] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293474.096084069] [planner_server]: 规划成功 | 采样节点数: 478 | 耗时: 13.80 ms
+[component_container_isolated-1] [INFO] [1773293474.136112084] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293475.132174194] [planner_server]: 规划成功 | 采样节点数: 414 | 耗时: 9.80 ms
+[component_container_isolated-1] [INFO] [1773293475.186103163] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293476.168985414] [planner_server]: 规划成功 | 采样节点数: 338 | 耗时: 6.60 ms
+[component_container_isolated-1] [INFO] [1773293476.186108183] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293477.201066192] [planner_server]: 规划成功 | 采样节点数: 381 | 耗时: 8.56 ms
+[component_container_isolated-1] [INFO] [1773293477.236102029] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293478.233632386] [planner_server]: 规划成功 | 采样节点数: 459 | 耗时: 11.33 ms
+[component_container_isolated-1] [INFO] [1773293478.286111388] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293479.265200893] [planner_server]: 规划成功 | 采样节点数: 212 | 耗时: 2.77 ms
+[component_container_isolated-1] [INFO] [1773293479.286106119] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293480.302355157] [planner_server]: 规划成功 | 采样节点数: 414 | 耗时: 9.77 ms
+[component_container_isolated-1] [INFO] [1773293480.336104800] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293481.336796879] [planner_server]: 规划成功 | 采样节点数: 271 | 耗时: 4.46 ms
+[component_container_isolated-1] [INFO] [1773293481.386114055] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [ERROR] [1773293481.986141645] [controller_server]: Failed to make progress
+[component_container_isolated-1] [WARN] [1773293481.986198182] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[component_container_isolated-1] [INFO] [1773293482.002349474] [behavior_server]: Running spin
+[component_container_isolated-1] [INFO] [1773293482.002468991] [behavior_server]: Turning 1.57 for spin behavior.
+[component_container_isolated-1] [INFO] [1773293484.502616581] [behavior_server]: spin completed successfully
+[component_container_isolated-1] [INFO] [1773293484.543632639] [planner_server]: 规划成功 | 采样节点数: 417 | 耗时: 11.24 ms
+[component_container_isolated-1] [INFO] [1773293484.562270970] [controller_server]: Received a goal, begin computing control effort.
+[component_container_isolated-1] [INFO] [1773293485.573642642] [planner_server]: 规划成功 | 采样节点数: 129 | 耗时: 1.18 ms
+[component_container_isolated-1] [INFO] [1773293485.612496155] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293486.604382668] [planner_server]: 规划成功 | 采样节点数: 154 | 耗时: 1.80 ms
+[component_container_isolated-1] [INFO] [1773293486.662508072] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293487.637403789] [planner_server]: 规划成功 | 采样节点数: 297 | 耗时: 5.03 ms
+[component_container_isolated-1] [INFO] [1773293487.662494893] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293488.668047023] [planner_server]: 规划成功 | 采样节点数: 285 | 耗时: 5.61 ms
+[component_container_isolated-1] [INFO] [1773293488.712507062] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293489.693749299] [planner_server]: 规划成功 | 采样节点数: 126 | 耗时: 1.26 ms
+[component_container_isolated-1] [INFO] [1773293489.712496564] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293490.726380010] [planner_server]: 规划成功 | 采样节点数: 263 | 耗时: 4.10 ms
+[component_container_isolated-1] [INFO] [1773293490.762499479] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293491.753266707] [planner_server]: 规划成功 | 采样节点数: 88 | 耗时: 0.78 ms
+[component_container_isolated-1] [INFO] [1773293491.812453446] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293492.796676425] [planner_server]: 规划成功 | 采样节点数: 519 | 耗时: 14.08 ms
+[component_container_isolated-1] [INFO] [1773293492.812494119] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293493.823320897] [planner_server]: 规划成功 | 采样节点数: 134 | 耗时: 1.00 ms
+[component_container_isolated-1] [INFO] [1773293493.862502052] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [ERROR] [1773293494.712606065] [controller_server]: Failed to make progress
+[component_container_isolated-1] [WARN] [1773293494.712752012] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[component_container_isolated-1] [INFO] [1773293494.732183001] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[component_container_isolated-1] [INFO] [1773293494.732509340] [controller_server]: Received a goal, begin computing control effort.
+[component_container_isolated-1] [INFO] [1773293494.853554536] [planner_server]: 规划成功 | 采样节点数: 104 | 耗时: 0.85 ms
+[component_container_isolated-1] [INFO] [1773293494.882692864] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [WARN] [1773293494.885638584] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-1] [INFO] [1773293495.889382418] [planner_server]: 规划成功 | 采样节点数: 335 | 耗时: 6.74 ms
+[component_container_isolated-1] [INFO] [1773293495.935699450] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293496.914915463] [planner_server]: 规划成功 | 采样节点数: 218 | 耗时: 2.56 ms
+[component_container_isolated-1] [INFO] [1773293496.935703315] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293497.947932165] [planner_server]: 规划成功 | 采样节点数: 261 | 耗时: 5.57 ms
+[component_container_isolated-1] [INFO] [1773293497.985720022] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293498.974761555] [planner_server]: 规划成功 | 采样节点数: 189 | 耗时: 2.24 ms
+[component_container_isolated-1] [INFO] [1773293499.035706536] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293500.006988763] [planner_server]: 规划成功 | 采样节点数: 280 | 耗时: 4.66 ms
+[component_container_isolated-1] [INFO] [1773293500.035693734] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293501.034066199] [planner_server]: 规划成功 | 采样节点数: 139 | 耗时: 1.51 ms
+[component_container_isolated-1] [INFO] [1773293501.085701382] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293502.065661553] [planner_server]: 规划成功 | 采样节点数: 250 | 耗时: 3.31 ms
+[component_container_isolated-1] [INFO] [1773293502.085698968] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293503.094163716] [planner_server]: 规划成功 | 采样节点数: 139 | 耗时: 1.70 ms
+[component_container_isolated-1] [INFO] [1773293503.135699416] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293504.123262590] [planner_server]: 规划成功 | 采样节点数: 82 | 耗时: 0.67 ms
+[component_container_isolated-1] [INFO] [1773293504.185715381] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [ERROR] [1773293504.985791360] [controller_server]: Failed to make progress
+[component_container_isolated-1] [WARN] [1773293504.985916758] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[component_container_isolated-1] [INFO] [1773293505.002591342] [behavior_server]: Running wait
+[component_container_isolated-1] [INFO] [1773293510.002814109] [behavior_server]: wait completed successfully
+[component_container_isolated-1] [INFO] [1773293510.042275135] [planner_server]: 规划成功 | 采样节点数: 397 | 耗时: 9.56 ms
+[component_container_isolated-1] [INFO] [1773293510.062301815] [controller_server]: Received a goal, begin computing control effort.
+[component_container_isolated-1] [INFO] [1773293511.073469658] [planner_server]: 规划成功 | 采样节点数: 139 | 耗时: 1.20 ms
+[component_container_isolated-1] [INFO] [1773293511.112534341] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293512.111553888] [planner_server]: 规划成功 | 采样节点数: 380 | 耗时: 8.88 ms
+[component_container_isolated-1] [INFO] [1773293512.162525496] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293513.133121346] [planner_server]: 规划成功 | 采样节点数: 108 | 耗时: 0.77 ms
+[component_container_isolated-1] [INFO] [1773293513.162537745] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293514.164974163] [planner_server]: 规划成功 | 采样节点数: 193 | 耗时: 2.68 ms
+[component_container_isolated-1] [INFO] [1773293514.212541210] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293515.195633294] [planner_server]: 规划成功 | 采样节点数: 211 | 耗时: 3.07 ms
+[component_container_isolated-1] [INFO] [1773293515.212534823] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293516.231575063] [planner_server]: 规划成功 | 采样节点数: 402 | 耗时: 9.19 ms
+[component_container_isolated-1] [INFO] [1773293516.262535548] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293517.262964756] [planner_server]: 规划成功 | 采样节点数: 440 | 耗时: 10.44 ms
+[component_container_isolated-1] [INFO] [1773293517.312530229] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293518.293613723] [planner_server]: 规划成功 | 采样节点数: 134 | 耗时: 1.27 ms
+[component_container_isolated-1] [INFO] [1773293518.312552334] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293519.347504612] [planner_server]: 规划成功 | 采样节点数: 660 | 耗时: 24.97 ms
+[component_container_isolated-1] [INFO] [1773293519.362522876] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [ERROR] [1773293520.112567370] [controller_server]: Failed to make progress
+[component_container_isolated-1] [WARN] [1773293520.112623647] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[component_container_isolated-1] [INFO] [1773293520.132226867] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[component_container_isolated-1] [INFO] [1773293520.132838878] [controller_server]: Received a goal, begin computing control effort.
+[component_container_isolated-1] [WARN] [1773293520.286259424] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-1] [INFO] [1773293520.376055937] [planner_server]: 规划成功 | 采样节点数: 260 | 耗时: 3.75 ms
+[component_container_isolated-1] [INFO] [1773293520.444585594] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293521.411077162] [planner_server]: 规划成功 | 采样节点数: 388 | 耗时: 8.51 ms
+[component_container_isolated-1] [INFO] [1773293521.436330368] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293522.435780778] [planner_server]: 规划成功 | 采样节点数: 243 | 耗时: 3.41 ms
+[component_container_isolated-1] [INFO] [1773293522.486334477] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293523.470569429] [planner_server]: 规划成功 | 采样节点数: 374 | 耗时: 7.82 ms
+[component_container_isolated-1] [INFO] [1773293523.486319971] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293524.510299862] [planner_server]: 规划成功 | 采样节点数: 554 | 耗时: 17.70 ms
+[component_container_isolated-1] [INFO] [1773293524.536333205] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293525.537225599] [planner_server]: 规划成功 | 采样节点数: 273 | 耗时: 4.58 ms
+[component_container_isolated-1] [INFO] [1773293525.586324435] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293526.582269446] [planner_server]: 规划成功 | 采样节点数: 580 | 耗时: 19.76 ms
+[component_container_isolated-1] [INFO] [1773293526.636334028] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293527.614780854] [planner_server]: 规划成功 | 采样节点数: 177 | 耗时: 2.13 ms
+[component_container_isolated-1] [INFO] [1773293527.636329941] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293528.658401289] [planner_server]: 规划成功 | 采样节点数: 535 | 耗时: 16.06 ms
+[component_container_isolated-1] [INFO] [1773293528.686332348] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293529.687241543] [planner_server]: 规划成功 | 采样节点数: 246 | 耗时: 4.87 ms
+[component_container_isolated-1] [INFO] [1773293529.736335645] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [ERROR] [1773293530.436390310] [controller_server]: Failed to make progress
+[component_container_isolated-1] [WARN] [1773293530.436529274] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[component_container_isolated-1] [INFO] [1773293530.452677066] [behavior_server]: Running backup
+[component_container_isolated-1] [INFO] [1773293530.452985240] [behavior_server]: DriveOnHeading: no acceleration or deceleration limits set
+[component_container_isolated-1] [WARN] [1773293530.453127881] [behavior_server]: Collision Ahead - Exiting DriveOnHeading
+[component_container_isolated-1] [WARN] [1773293530.453139212] [behavior_server]: backup failed
+[component_container_isolated-1] [WARN] [1773293530.453150303] [behavior_server]: [backup] [ActionServer] Aborting handle.
+[component_container_isolated-1] [INFO] [1773293530.482201595] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[component_container_isolated-1] [INFO] [1773293530.482362851] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[component_container_isolated-1] [INFO] [1773293530.695459520] [planner_server]: 规划成功 | 采样节点数: 212 | 耗时: 2.57 ms
+[component_container_isolated-1] [WARN] [1773293530.695582834] [planner_server]: Planner loop missed its desired rate of 20.0000 Hz. Current loop rate is 3.3333 Hz
+[component_container_isolated-1] [INFO] [1773293530.712717557] [controller_server]: Received a goal, begin computing control effort.
+[component_container_isolated-1] [INFO] [1773293531.723479618] [planner_server]: 规划成功 | 采样节点数: 83 | 耗时: 0.89 ms
+[component_container_isolated-1] [INFO] [1773293531.763254575] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293532.754048269] [planner_server]: 规划成功 | 采样节点数: 141 | 耗时: 1.46 ms
+[component_container_isolated-1] [INFO] [1773293532.813265944] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293533.783253945] [planner_server]: 规划成功 | 采样节点数: 101 | 耗时: 0.84 ms
+[component_container_isolated-1] [INFO] [1773293533.813256228] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293534.813110676] [planner_server]: 规划成功 | 采样节点数: 72 | 耗时: 0.47 ms
+[component_container_isolated-1] [INFO] [1773293534.863257897] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293535.842621149] [planner_server]: 规划成功 | 采样节点数: 65 | 耗时: 0.32 ms
+[component_container_isolated-1] [INFO] [1773293535.863273380] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293536.872748231] [planner_server]: 规划成功 | 采样节点数: 22 | 耗时: 0.21 ms
+[component_container_isolated-1] [INFO] [1773293536.913255040] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293537.902575746] [planner_server]: 规划成功 | 采样节点数: 15 | 耗时: 0.12 ms
+[component_container_isolated-1] [INFO] [1773293537.963269832] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293538.932565618] [planner_server]: 规划成功 | 采样节点数: 28 | 耗时: 0.16 ms
+[component_container_isolated-1] [INFO] [1773293538.963256822] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293539.962975606] [planner_server]: 规划成功 | 采样节点数: 11 | 耗时: 0.24 ms
+[component_container_isolated-1] [INFO] [1773293540.013264329] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293540.992448578] [planner_server]: 规划成功 | 采样节点数: 14 | 耗时: 0.13 ms
+[component_container_isolated-1] [INFO] [1773293541.013256271] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293542.022498704] [planner_server]: 规划成功 | 采样节点数: 13 | 耗时: 0.11 ms
+[component_container_isolated-1] [INFO] [1773293542.063262222] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293543.052477494] [planner_server]: 规划成功 | 采样节点数: 8 | 耗时: 0.09 ms
+[component_container_isolated-1] [INFO] [1773293543.113265518] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293544.082434564] [planner_server]: 规划成功 | 采样节点数: 15 | 耗时: 0.11 ms
+[component_container_isolated-1] [INFO] [1773293544.113263174] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293545.113125344] [planner_server]: 规划成功 | 采样节点数: 9 | 耗时: 0.19 ms
+[component_container_isolated-1] [INFO] [1773293545.163266759] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293546.142458571] [planner_server]: 规划成功 | 采样节点数: 8 | 耗时: 0.08 ms
+[component_container_isolated-1] [INFO] [1773293546.163253857] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293547.162748233] [planner_server]: 规划成功 | 采样节点数: 10 | 耗时: 0.18 ms
+[component_container_isolated-1] [INFO] [1773293547.213267402] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293548.192450051] [planner_server]: 规划成功 | 采样节点数: 6 | 耗时: 0.08 ms
+[component_container_isolated-1] [INFO] [1773293548.213257078] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293549.222600168] [planner_server]: 规划成功 | 采样节点数: 11 | 耗时: 0.12 ms
+[component_container_isolated-1] [INFO] [1773293549.263260764] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293550.252815360] [planner_server]: 规划成功 | 采样节点数: 5 | 耗时: 0.16 ms
+[component_container_isolated-1] [INFO] [1773293550.313274237] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293551.282577303] [planner_server]: 规划成功 | 采样节点数: 10 | 耗时: 0.09 ms
+[component_container_isolated-1] [INFO] [1773293551.313263977] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293552.312892685] [planner_server]: 规划成功 | 采样节点数: 5 | 耗时: 0.16 ms
+[component_container_isolated-1] [INFO] [1773293552.363254057] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293553.342435845] [planner_server]: 规划成功 | 采样节点数: 8 | 耗时: 0.08 ms
+[component_container_isolated-1] [INFO] [1773293553.363259170] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293554.372717785] [planner_server]: 规划成功 | 采样节点数: 12 | 耗时: 0.13 ms
+[component_container_isolated-1] [INFO] [1773293554.413272625] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293555.402693126] [planner_server]: 规划成功 | 采样节点数: 18 | 耗时: 0.16 ms
+[component_container_isolated-1] [INFO] [1773293555.463271592] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293556.432412993] [planner_server]: 规划成功 | 采样节点数: 4 | 耗时: 0.08 ms
+[component_container_isolated-1] [INFO] [1773293556.463255108] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293557.462391541] [planner_server]: 规划成功 | 采样节点数: 3 | 耗时: 0.07 ms
+[component_container_isolated-1] [INFO] [1773293557.513279535] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293558.493111326] [planner_server]: 规划成功 | 采样节点数: 37 | 耗时: 0.44 ms
+[component_container_isolated-1] [INFO] [1773293558.513276981] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293559.522895037] [planner_server]: 规划成功 | 采样节点数: 18 | 耗时: 0.22 ms
+[component_container_isolated-1] [INFO] [1773293559.563274458] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293560.555151957] [planner_server]: 规划成功 | 采样节点数: 151 | 耗时: 2.78 ms
+[component_container_isolated-1] [INFO] [1773293560.613254692] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293561.583834754] [planner_server]: 规划成功 | 采样节点数: 62 | 耗时: 1.09 ms
+[component_container_isolated-1] [INFO] [1773293561.613277002] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293562.612819494] [planner_server]: 规划成功 | 采样节点数: 32 | 耗时: 0.34 ms
+[component_container_isolated-1] [INFO] [1773293562.663270042] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293563.642737094] [planner_server]: 规划成功 | 采样节点数: 18 | 耗时: 0.22 ms
+[component_container_isolated-1] [INFO] [1773293563.663258411] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293564.672374515] [planner_server]: 规划成功 | 采样节点数: 2 | 耗时: 0.07 ms
+[component_container_isolated-1] [INFO] [1773293564.713263877] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293565.703221068] [planner_server]: 规划成功 | 采样节点数: 52 | 耗时: 0.59 ms
+[component_container_isolated-1] [INFO] [1773293565.763264995] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293566.732942480] [planner_server]: 规划成功 | 采样节点数: 30 | 耗时: 0.28 ms
+[component_container_isolated-1] [INFO] [1773293566.763263399] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [ERROR] [1773293567.163371354] [controller_server]: Failed to make progress
+[component_container_isolated-1] [WARN] [1773293567.163491272] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[component_container_isolated-1] [INFO] [1773293567.182182187] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[component_container_isolated-1] [INFO] [1773293567.182503887] [controller_server]: Received a goal, begin computing control effort.
+[component_container_isolated-1] [WARN] [1773293567.284397599] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-1] [INFO] [1773293567.762517597] [planner_server]: 规划成功 | 采样节点数: 6 | 耗时: 0.10 ms
+[component_container_isolated-1] [INFO] [1773293567.811041396] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293568.792440254] [planner_server]: 规划成功 | 采样节点数: 8 | 耗时: 0.09 ms
+[component_container_isolated-1] [INFO] [1773293568.834465244] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293569.822746209] [planner_server]: 规划成功 | 采样节点数: 12 | 耗时: 0.18 ms
+[component_container_isolated-1] [INFO] [1773293569.884472798] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293570.852965141] [planner_server]: 规划成功 | 采样节点数: 33 | 耗时: 0.32 ms
+[component_container_isolated-1] [INFO] [1773293570.884470552] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293571.882464070] [planner_server]: 规划成功 | 采样节点数: 20 | 耗时: 0.12 ms
+[component_container_isolated-1] [INFO] [1773293571.934479270] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293572.912514266] [planner_server]: 规划成功 | 采样节点数: 8 | 耗时: 0.10 ms
+[component_container_isolated-1] [INFO] [1773293572.934523067] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293573.947678716] [planner_server]: 规划成功 | 采样节点数: 184 | 耗时: 5.27 ms
+[component_container_isolated-1] [INFO] [1773293573.984463599] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293574.973355066] [planner_server]: 规划成功 | 采样节点数: 49 | 耗时: 0.75 ms
+[component_container_isolated-1] [INFO] [1773293575.034468554] [controller_server]: Passing new path to controller.
+[component_container_isolated-1] [INFO] [1773293575.138092734] [controller_server]: Reached the goal!
+[component_container_isolated-1] [INFO] [1773293575.172344335] [bt_navigator]: Goal succeeded
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[component_container_isolated-1] [INFO] [1773293578.241995721] [rclcpp]: signal_handler(signum=2)
+[component_container_isolated-1] [INFO] [1773293578.242108404] [lifecycle_manager_navigation]: Running Nav2 LifecycleManager rcl preshutdown (lifecycle_manager_navigation)
+[component_container_isolated-1] [INFO] [1773293578.242243060] [lifecycle_manager_navigation]: [34m[1mTerminating bond timer...[0m[0m
+[rviz2-2] [INFO] [1773293578.241997164] [rclcpp]: signal_handler(signum=2)
+[component_container_isolated-1] [INFO] [1773293578.326757228] [velocity_smoother]: Running Nav2 LifecycleNode rcl preshutdown (velocity_smoother)
+[component_container_isolated-1] [INFO] [1773293578.326841958] [velocity_smoother]: Deactivating
+[component_container_isolated-1] [INFO] [1773293578.326871063] [velocity_smoother]: Destroying bond (velocity_smoother) to lifecycle manager.
+[component_container_isolated-1] [INFO] [1773293578.337119665] [velocity_smoother]: Cleaning up
+[component_container_isolated-1] [INFO] [1773293578.337188215] [velocity_smoother]: Destroying bond (velocity_smoother) to lifecycle manager.
+[component_container_isolated-1] [INFO] [1773293578.337205407] [waypoint_follower]: Running Nav2 LifecycleNode rcl preshutdown (waypoint_follower)
+[component_container_isolated-1] [INFO] [1773293578.337235935] [waypoint_follower]: Deactivating
+[component_container_isolated-1] [INFO] [1773293578.337254941] [waypoint_follower]: Destroying bond (waypoint_follower) to lifecycle manager.
+[component_container_isolated-1] [INFO] [1773293578.347378786] [waypoint_follower]: Cleaning up
+[component_container_isolated-1] [INFO] [1773293578.353355472] [waypoint_follower]: Destroying bond (waypoint_follower) to lifecycle manager.
+[component_container_isolated-1] [INFO] [1773293578.353385680] [behavior_server]: Running Nav2 LifecycleNode rcl preshutdown (behavior_server)
+[component_container_isolated-1] [INFO] [1773293578.353402942] [behavior_server]: Deactivating
+[component_container_isolated-1] [INFO] [1773293578.353433550] [behavior_server]: Destroying bond (behavior_server) to lifecycle manager.
+[component_container_isolated-1] [INFO] [1773293578.363590278] [behavior_server]: Cleaning up
+[component_container_isolated-1] [INFO] [1773293578.380253115] [behavior_server]: Destroying bond (behavior_server) to lifecycle manager.
+[component_container_isolated-1] [INFO] [1773293578.380282811] [lifecycle_manager_localization]: Running Nav2 LifecycleManager rcl preshutdown (lifecycle_manager_localization)
+[component_container_isolated-1] [INFO] [1773293578.380293281] [lifecycle_manager_localization]: [34m[1mTerminating bond timer...[0m[0m
+[component_container_isolated-1] [INFO] [1773293578.405859700] [amcl]: Running Nav2 LifecycleNode rcl preshutdown (amcl)
+[component_container_isolated-1] [INFO] [1773293578.405946715] [amcl]: Deactivating
+[component_container_isolated-1] [INFO] [1773293578.405974678] [amcl]: Destroying bond (amcl) to lifecycle manager.
+[component_container_isolated-1] [INFO] [1773293578.416106328] [amcl]: Cleaning up
+[component_container_isolated-1] [INFO] [1773293578.420430643] [amcl]: Destroying bond (amcl) to lifecycle manager.
+[component_container_isolated-1] [INFO] [1773293578.420453596] [bt_navigator]: Running Nav2 LifecycleNode rcl preshutdown (bt_navigator)
+[component_container_isolated-1] [INFO] [1773293578.420466932] [bt_navigator]: Deactivating
+[component_container_isolated-1] [INFO] [1773293578.420478393] [bt_navigator]: Destroying bond (bt_navigator) to lifecycle manager.
+[component_container_isolated-1] [INFO] [1773293578.430620022] [bt_navigator]: Cleaning up
+[component_container_isolated-1] [INFO] [1773293578.486255474] [bt_navigator]: Completed Cleaning up
+[component_container_isolated-1] [INFO] [1773293578.486321098] [bt_navigator]: Destroying bond (bt_navigator) to lifecycle manager.
+[component_container_isolated-1] [INFO] [1773293578.486330636] [map_server]: Running Nav2 LifecycleNode rcl preshutdown (map_server)
+[component_container_isolated-1] [INFO] [1773293578.486349873] [map_server]: Deactivating
+[component_container_isolated-1] [INFO] [1773293578.486369189] [map_server]: Destroying bond (map_server) to lifecycle manager.
+[component_container_isolated-1] [INFO] [1773293578.496525165] [map_server]: Cleaning up
+[component_container_isolated-1] [INFO] [1773293578.496571804] [map_server]: Destroying bond (map_server) to lifecycle manager.
+[component_container_isolated-1] [INFO] [1773293578.496580029] [planner_server]: Running Nav2 LifecycleNode rcl preshutdown (planner_server)
+[component_container_isolated-1] [INFO] [1773293578.496602432] [planner_server]: Deactivating
+[component_container_isolated-1] [INFO] [1773293578.496636817] [global_costmap.global_costmap]: Deactivating
+[component_container_isolated-1] [INFO] [1773293578.691094963] [planner_server]: Destroying bond (planner_server) to lifecycle manager.
+[component_container_isolated-1] [INFO] [1773293578.701257432] [planner_server]: Cleaning up
+[component_container_isolated-1] [INFO] [1773293578.711107588] [global_costmap.global_costmap]: Cleaning up
+[component_container_isolated-1] [INFO] [1773293578.720544141] [planner_server]: Destroying bond (planner_server) to lifecycle manager.
+[component_container_isolated-1] [INFO] [1773293578.720579438] [smoother_server]: Running Nav2 LifecycleNode rcl preshutdown (smoother_server)
+[component_container_isolated-1] [INFO] [1773293578.720597382] [smoother_server]: Deactivating
+[component_container_isolated-1] [INFO] [1773293578.720611879] [smoother_server]: Destroying bond (smoother_server) to lifecycle manager.
+[component_container_isolated-1] [INFO] [1773293578.730717710] [smoother_server]: Cleaning up
+[component_container_isolated-1] [INFO] [1773293578.735694732] [smoother_server]: Destroying bond (smoother_server) to lifecycle manager.
+[component_container_isolated-1] [INFO] [1773293578.735714970] [controller_server]: Running Nav2 LifecycleNode rcl preshutdown (controller_server)
+[component_container_isolated-1] [INFO] [1773293578.735730259] [controller_server]: Deactivating
+[component_container_isolated-1] [INFO] [1773293578.735756188] [local_costmap.local_costmap]: Deactivating
+[component_container_isolated-1] [INFO] [1773293578.878349148] [controller_server]: Destroying bond (controller_server) to lifecycle manager.
+[component_container_isolated-1] [INFO] [1773293578.888530302] [controller_server]: Cleaning up
+[component_container_isolated-1] [INFO] [1773293578.889305140] [local_costmap.local_costmap]: Cleaning up
+[component_container_isolated-1] [INFO] [1773293578.905290253] [controller_server]: Destroying bond (controller_server) to lifecycle manager.
+[ERROR] [rviz2-2]: process has died [pid 62887, exit code -11, cmd '/opt/ros/humble/lib/rviz2/rviz2 -d /opt/ros/humble/share/nav2_bringup/rviz/nav2_default_view.rviz --ros-args -r __node:=rviz2 --params-file /tmp/launch_params_pqvgldkp'].
+[ERROR] [component_container_isolated-1]: process[component_container_isolated-1] failed to terminate '5' seconds after receiving 'SIGINT', escalating to 'SIGTERM'
+[INFO] [component_container_isolated-1]: sending signal 'SIGTERM' to process[component_container_isolated-1]
+[component_container_isolated-1] [INFO] [1773293584.096136603] [rclcpp]: signal_handler(signum=15)
+[ERROR] [component_container_isolated-1]: process[component_container_isolated-1] failed to terminate '10.0' seconds after receiving 'SIGTERM', escalating to 'SIGKILL'
+[INFO] [component_container_isolated-1]: sending signal 'SIGKILL' to process[component_container_isolated-1]
+[ERROR] [component_container_isolated-1]: process has died [pid 62885, exit code -9, cmd '/opt/ros/humble/lib/rclcpp_components/component_container_isolated --ros-args --log-level info --ros-args -r __node:=nav2_container --params-file /tmp/launch_params_y37ylp30 --params-file /tmp/launch_params_wsmrv5gt -r /tf:=tf -r /tf_static:=tf_static'].
